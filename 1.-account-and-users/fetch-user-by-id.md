@@ -1,25 +1,20 @@
-# Fetch User by ID
+## Fetch User by ID
 
-undefined
+```GET {{base_url}}/users/{{example_user_id}}```
 
-`GET {{base_url}}/users/{{example_user_id}}`
+### Headers
 
-## Headers
+Key | Value | Description | Type
+--- | --- | --- | ---
+X-PW-AccessToken | {{api_token}} | undefined | undefined
+X-PW-Application | developer_api | undefined | undefined
+X-PW-UserEmail | {{api_email}} | undefined | undefined
+Content-Type | application/json | undefined | undefined
+### Example Responses
 
-| Key | Value | Description | Type |
-| :--- | :--- | :--- | :--- |
-| X-PW-AccessToken |  | undefined | undefined |
-| X-PW-Application | developer\_api | undefined | undefined |
-| X-PW-UserEmail |  | undefined | undefined |
-| Content-Type | application/json | undefined | undefined |
-
-## Example Responses
-
-* User
+- User
 
 200: OK
-
-```javascript
+```json
 {"id":159258,"name":"Demo User","email":"ehdb@phpbb.uu.gl"}
 ```
-

@@ -1,21 +1,18 @@
-# Create a New Task
+## Create a New Task
 
-undefined
+```POST {{base_url}}/tasks```
 
-`POST {{base_url}}/tasks`
+### Headers
 
-## Headers
+Key | Value | Description | Type
+--- | --- | --- | ---
+X-PW-AccessToken | {{api_token}} | undefined | undefined
+X-PW-Application | developer_api | undefined | undefined
+X-PW-UserEmail | {{api_email}} | undefined | undefined
+Content-Type | application/json | undefined | undefined
+### Body
 
-| Key | Value | Description | Type |
-| :--- | :--- | :--- | :--- |
-| X-PW-AccessToken |  | undefined | undefined |
-| X-PW-Application | developer\_api | undefined | undefined |
-| X-PW-UserEmail |  | undefined | undefined |
-| Content-Type | application/json | undefined | undefined |
-
-## Body
-
-```text
+```
 {
     "name": "Demo task",
     "related_resource": {
@@ -32,14 +29,11 @@ undefined
     "custom_fields": []
 }
 ```
+### Example Responses
 
-## Example Responses
-
-* Create Task
+- Create Task
 
 200: OK
-
-```javascript
+```json
 {"id":3726701,"name":"Demo Task","related_resource":{"id":null,"type":null},"assignee_id":137658,"due_date":null,"reminder_date":null,"completed_date":null,"priority":"None","status":"Open","details":null,"tags":[],"custom_fields":[],"date_created":1496771985,"date_modified":1496771985}
 ```
-

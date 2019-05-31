@@ -1,25 +1,21 @@
-# Get Custom Activity Type
+## Get Custom Activity Type
 
-undefined
+```GET {{base_url}}/custom_activity_types/{{custom_activity_type_id}}```
 
-`GET {{base_url}}/custom_activity_types/{{custom_activity_type_id}}`
+### Headers
 
-## Headers
+Key | Value | Description | Type
+--- | --- | --- | ---
+X-PW-AccessToken | {{api_token}} | undefined | undefined
+X-PW-Application | developer_api | undefined | undefined
+X-PW-UserEmail | {{api_email}} | undefined | undefined
+Content-Type | application/json | undefined | undefined
+### Example Responses
 
-| Key | Value | Description | Type |
-| :--- | :--- | :--- | :--- |
-| X-PW-AccessToken |  | undefined | undefined |
-| X-PW-Application | developer\_api | undefined | undefined |
-| X-PW-UserEmail |  | undefined | undefined |
-| Content-Type | application/json | undefined | undefined |
-
-## Example Responses
-
-* Get Custom Activity Type
+- Get Custom Activity Type
 
 200: OK
-
-```javascript
+```json
 {
     "id": 4,
     "company_id": 1,
@@ -30,4 +26,3 @@ undefined
     "is_default_task_type": null
 }
 ```
-

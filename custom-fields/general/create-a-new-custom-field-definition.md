@@ -1,50 +1,47 @@
-# Create a new custom field definition
+## Create a new custom field definition
 
-| Field | Type | Details | Default |
-| :--- | :--- | :--- | :--- |
-| name\* | string | Name of the Custom Field Definition |  |
-| data\_type\* | string | One of the following strings: "Checkbox", "Currency", “Date", "Dropdown", "Float", "MultiSelect", "Percentage", “String", "Text", "URL" |  |
-| available\_on | string array | List of strings containing one or more of the following: “lead”, “person”, “opportunity”, “company”, "project", "task" |  |
-| options | integer array | Array of options for Dropdown and MultiSelect fields.  A minimum of one option is required for Dropdown and a minimum of 2 options is required for MultiSelect |  |
-| currency | string | 3-letter country code \(e.g., "USD", "CAD"\) |  |
-| \* indicates a required field |  |  |  |
+```POST {{base_url}}/custom_field_definitions```
 
-`POST {{base_url}}/custom_field_definitions`
+| Field                 | Type          | Details | Default |
+| --------------------- | ------------- | ----------------------- | ---------------------- |
+| name*              | string | Name of the Custom Field Definition                     |                      |
+| data_type*                  | string | One of the following strings: "Checkbox", "Currency", “Date", "Dropdown", "Float", "MultiSelect", "Percentage", “String", "Text", "URL" |                      |
+| available_on              | string array       | List of strings containing one or more of the following: “lead”, “person”, “opportunity”, “company”, "project", "task"                      |                      |
+| options          | integer array       | Array of options for Dropdown and MultiSelect fields.  A minimum of one option is required for Dropdown and a minimum of 2 options is required for MultiSelect                      |                      |
+| currency            | string | 3-letter country code (e.g., "USD", "CAD")                     |                      |
+|\* indicates a required field| | |
 
-## Headers
+### Headers
 
-| Key | Value | Description | Type |
-| :--- | :--- | :--- | :--- |
-| X-PW-AccessToken |  | undefined | undefined |
-| X-PW-Application | developer\_api | undefined | undefined |
-| X-PW-UserEmail |  | undefined | undefined |
-| Content-Type | application/json | undefined | undefined |
+Key | Value | Description | Type
+--- | --- | --- | ---
+X-PW-AccessToken | {{api_token}} | undefined | undefined
+X-PW-Application | developer_api | undefined | undefined
+X-PW-UserEmail | {{api_email}} | undefined | undefined
+Content-Type | application/json | undefined | undefined
+### Body
 
-## Body
-
-```text
+```
 {
   "name": "A Dropdown",
   "data_type": "Dropdown",
   "available_on": [ "lead", "person", "company"],
   "options": [
-      {
-          "name": "Option1"
-      },
-      {
-          "name": "Option2"
-      }
+  	{
+  		"name": "Option1"
+  	},
+  	{
+  		"name": "Option2"
+  	}
   ]
 }
 ```
+### Example Responses
 
-## Example Responses
-
-* Create a Currency Custom Field
+- Create a Currency Custom Field
 
 200: OK
-
-```javascript
+```json
 {
     "id": 6,
     "name": "My Currency",
@@ -57,12 +54,10 @@
     "currency": "CAD"
 }
 ```
-
-* Create a Dropdown Custom Field
+- Create a Dropdown Custom Field
 
 200: OK
-
-```javascript
+```json
 {
     "id": 5,
     "name": "A Dropdown",
@@ -89,12 +84,10 @@
     ]
 }
 ```
-
-* Create a String Custom Field
+- Create a String Custom Field
 
 200: OK
-
-```javascript
+```json
 {
     "id": 7,
     "name": "A String",
@@ -106,4 +99,3 @@
     ]
 }
 ```
-

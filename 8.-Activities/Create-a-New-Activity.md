@@ -1,7 +1,5 @@
 ## Create a New Activity
 
-undefined
-
 ```POST {{base_url}}/activities```
 
 ### Headers

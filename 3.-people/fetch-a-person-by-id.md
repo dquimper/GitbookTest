@@ -1,15 +1,12 @@
-# Fetch a Person by ID
+## Fetch a Person by ID
 
-undefined
+```GET {{base_url}}/people/{{example_person_id}}```
 
-`GET {{base_url}}/people/{{example_person_id}}`
+### Headers
 
-## Headers
-
-| Key | Value | Description | Type |
-| :--- | :--- | :--- | :--- |
-| X-PW-AccessToken |  | undefined | undefined |
-| X-PW-Application | developer\_api | undefined | undefined |
-| X-PW-UserEmail |  | undefined | undefined |
-| Content-Type | application/json | undefined | undefined |
-
+Key | Value | Description | Type
+--- | --- | --- | ---
+X-PW-AccessToken | {{api_token}} | undefined | undefined
+X-PW-Application | developer_api | undefined | undefined
+X-PW-UserEmail | {{api_email}} | undefined | undefined
+Content-Type | application/json | undefined | undefined

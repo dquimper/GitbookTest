@@ -1,39 +1,37 @@
-# Create a New Custom Activity Type
+## Create a New Custom Activity Type
 
-| Field | Type | Details | Default |
-| :--- | :--- | :--- | :--- |
-| name\* | string | Name of the custom activity type. |  |
-| icon\_type\* | string | Icon Type. Must be one of: "Message", "Phone", "Event", "Assignment", "Assessment", "Group", "Description", "Speaker Notes", "Forum", "Web", "Loyalty", "Content Paste", "Headset", "Share", "Navigation", "Notification", "Voicemail", "Room", "Edit", "Send", "Videocam", "Play Arrow", "Grocery Store", "Mic", "Camera Mic", "Todo" |  |
+```POST {{base_url}}/custom_activity_types```
 
-\*indicates a required field
+|   Field                     | Type   |  Details  |  Default  |
+| --------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------- | - |
+| name*                       | string | Name of the custom activity type.                                                                                                              |   |
+| icon_type*                  | string | Icon Type. Must be one of: "Message", "Phone", "Event", "Assignment", "Assessment", "Group", "Description", "Speaker Notes", "Forum", "Web", "Loyalty", "Content Paste", "Headset", "Share", "Navigation", "Notification", "Voicemail", "Room", "Edit", "Send", "Videocam", "Play Arrow", "Grocery Store", "Mic", "Camera Mic", "Todo" | |
 
-`POST {{base_url}}/custom_activity_types`
+*indicates a required field
 
-## Headers
+### Headers
 
-| Key | Value | Description | Type |
-| :--- | :--- | :--- | :--- |
-| X-PW-AccessToken |  | undefined | undefined |
-| X-PW-Application | developer\_api | undefined | undefined |
-| X-PW-UserEmail |  | undefined | undefined |
-| Content-Type | application/json | undefined | undefined |
+Key | Value | Description | Type
+--- | --- | --- | ---
+X-PW-AccessToken | {{api_token}} | undefined | undefined
+X-PW-Application | developer_api | undefined | undefined
+X-PW-UserEmail | {{api_email}} | undefined | undefined
+Content-Type | application/json | undefined | undefined
+### Body
 
-## Body
-
-```text
+```
 {
   "name": "New Activity",
   "icon_type": "Phone"
 }
+
 ```
+### Example Responses
 
-## Example Responses
-
-* Create a New Custom Activity Type
+- Create a New Custom Activity Type
 
 200: OK
-
-```javascript
+```json
 {
     "id": 5,
     "company_id": 1,
@@ -44,4 +42,3 @@
     "is_default_task_type": null
 }
 ```
-

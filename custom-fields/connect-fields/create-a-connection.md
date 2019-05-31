@@ -1,21 +1,20 @@
-# Create a connection
+## Create a connection
+
+```POST {{base_url}}/related_links```
 
 Once you have created connect fields, use the create a connection API to add connections to the connect field.
 
-`POST {{base_url}}/related_links`
+### Headers
 
-## Headers
+Key | Value | Description | Type
+--- | --- | --- | ---
+X-PW-AccessToken | {{api_token}} | undefined | undefined
+X-PW-Application | developer_api | undefined | undefined
+X-PW-UserEmail | {{api_email}} | undefined | undefined
+Content-Type | application/json | undefined | undefined
+### Body
 
-| Key | Value | Description | Type |
-| :--- | :--- | :--- | :--- |
-| X-PW-AccessToken |  | undefined | undefined |
-| X-PW-Application | developer\_api | undefined | undefined |
-| X-PW-UserEmail |  | undefined | undefined |
-| Content-Type | application/json | undefined | undefined |
-
-## Body
-
-```text
+```
 {
     "custom_field_definition_id": 169, 
     "source": {
@@ -23,19 +22,18 @@ Once you have created connect fields, use the create a connection API to add con
         "entity_type": "lead"
     }, 
     "target": {
-        "id": 1002, 
+    	"id": 1002, 
     "entity_type": "lead"
     }
 }
+
 ```
+### Example Responses
 
-## Example Responses
-
-* Create a new connection
+- Create a new connection
 
 200: OK
-
-```javascript
+```json
 {
     "id": 2103,
     "custom_field_definition_id": 169,
@@ -51,4 +49,3 @@ Once you have created connect fields, use the create a connection API to add con
     }
 }
 ```
-

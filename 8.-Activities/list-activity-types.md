@@ -1,5 +1,7 @@
 ## List Activity Types
 
+```GET {{base_url}}/activity_types```
+
 Activity Types identify the types of Activities that occur in Copper. The Activity Types Developer API allows you to retrieve the list of Activity Types associated with your Copper account. There are two categories of Activity Type.
 
 
@@ -20,8 +22,6 @@ Activity Types with category "system" describe system-generated Activities. Ther
 | count_as_interaction | boolean | For Activity Types of category "user", whether or not Activities of this type are counted toward interactions data. |
 
 When supplied as parameters for Activity creation or search, Activity Type objects need only specify the "category" and "id" fields. Any other values provided will be ignored.
-
-```GET {{base_url}}/activity_types```
 
 ### Headers
 

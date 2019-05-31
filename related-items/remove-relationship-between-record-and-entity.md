@@ -1,21 +1,20 @@
-# Remove relationship between record and Entity
+## Remove relationship between record and Entity
+
+```DELETE {{base_url}}/{{entity}}/{{entity_id}}/related```
 
 Removing the relationship does not cause any of the records involved to be deleted from the system.
 
-`DELETE {{base_url}}/{{entity}}/{{entity_id}}/related`
+### Headers
 
-## Headers
+Key | Value | Description | Type
+--- | --- | --- | ---
+X-PW-AccessToken | {{api_token}} | undefined | undefined
+X-PW-Application | developer_api | undefined | undefined
+X-PW-UserEmail | {{api_email}} | undefined | undefined
+Content-Type | application/json | undefined | undefined
+### Body
 
-| Key | Value | Description | Type |
-| :--- | :--- | :--- | :--- |
-| X-PW-AccessToken |  | undefined | undefined |
-| X-PW-Application | developer\_api | undefined | undefined |
-| X-PW-UserEmail |  | undefined | undefined |
-| Content-Type | application/json | undefined | undefined |
-
-## Body
-
-```text
+```
 {
   "resource": {
     "id": 2827700,
@@ -23,14 +22,11 @@ Removing the relationship does not cause any of the records involved to be delet
   }
 }
 ```
+### Example Responses
 
-## Example Responses
-
-* Remove relationship between person and opportunity
+- Remove relationship between person and opportunity
 
 200: OK
-
-```javascript
+```json
 {"removed":true,"resource":{"id":2827700,"type":"opportunity"}}
 ```
-

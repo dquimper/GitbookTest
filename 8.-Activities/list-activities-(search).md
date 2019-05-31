@@ -1,5 +1,7 @@
 ## List Activities (Search)
 
+```POST {{base_url}}/activities/search```
+
 The /search endpoint provides the ability to list records and sort the results by certain parameters. When multiple ciriteria are provided records meeting ALL criteria will be returned (the filtering criteria have an 'AND' relationship).
 
 To see examples of search request using the various parameters, click on the `Search Activities` dropdown on the right.
@@ -18,8 +20,6 @@ Footnotes:
 1. Parent is specified by: {"id": parent_id, "type": parent_type}. "parent_type" can be "lead", "person", "company", "opportunity", "project", "task". 
 2. Activity types is specified by: {"id": activity_type_id, "category": category }. "activity_type_id" and "category" can be retrieved from `List Activity Types` under `Other Resources` folder.
 3. If the List Activities Search endpoint is timing out, a flag `full_result=true` can be added. One can expect to see multiple entries returned for the same activity if an email was sent to multiple users. In order to use this flag, user must have admin capabilities. Otherwise, the flag is ignored.
-
-```POST {{base_url}}/activities/search```
 
 ### Headers
 
