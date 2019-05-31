@@ -5,7 +5,7 @@
 Becoming a super hero is a fairly straight forward process:
 
 ```
-$ give me super-powers now
+$ give me super-powers right now
 ```
 
 {% hint style="info" %}
