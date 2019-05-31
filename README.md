@@ -1,15 +1,11 @@
 # Gitbook Test
 
-* [Page 1](https://app.gitbook.com/@dansrc/s/test2/~/edit/drafts/-LgDHV1c9ZMEvHf1_-hY/page1)
-* \[\[page2\]\]
-* \[\[page3\]\]
-
 This is a test
 
 ### Links
 
-* \[\[page1\]\]
-* \[page2\]
+* [page1](page1.md)
+* [page2](page2.md)
 * [page3](page3.md)
 
 ## Title 1
