@@ -1,14 +1,20 @@
 ## Create a New Task
-,undefined
-,```POST {{base_url}}/tasks```
-,### Headers
-,Key | Value | Description | Type
+
+undefined
+
+```POST {{base_url}}/tasks```
+
+### Headers
+
+Key | Value | Description | Type
 --- | --- | --- | ---
 X-PW-AccessToken | {{api_token}} | undefined | undefined
 X-PW-Application | developer_api | undefined | undefined
 X-PW-UserEmail | {{api_email}} | undefined | undefined
-Content-Type | application/json | undefined | undefined,### Body
-,```
+Content-Type | application/json | undefined | undefined
+### Body
+
+```
 {
     "name": "Demo task",
     "related_resource": {
@@ -24,8 +30,12 @@ Content-Type | application/json | undefined | undefined,### Body
     "tags": [],
     "custom_fields": []
 }
-```,### Example Responses
-,- Create Task
-,200: OK,```json
+```
+### Example Responses
+
+- Create Task
+
+200: OK
+```json
 {"id":3726701,"name":"Demo Task","related_resource":{"id":null,"type":null},"assignee_id":137658,"due_date":null,"reminder_date":null,"completed_date":null,"priority":"None","status":"Open","details":null,"tags":[],"custom_fields":[],"date_created":1496771985,"date_modified":1496771985}
 ```

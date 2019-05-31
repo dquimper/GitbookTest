@@ -1,5 +1,6 @@
 ## List Projects (Search)
-,The /search endpoint provides the ability to list records and sort the results by certain parameters. When multiple ciriteria are provided records meeting ALL criteria will be returned (the filtering criteria have an 'AND' relationship).
+
+The /search endpoint provides the ability to list records and sort the results by certain parameters. When multiple ciriteria are provided records meeting ALL criteria will be returned (the filtering criteria have an 'AND' relationship).
 
 To see examples of search request using the various parameters, click on the `Projects Search` dropdown on the right. Certain fields can be filtered by an empty value, i.e., filter records where the field is not specified. For Projects, these fields are: tags, custom dropdown, custom multi-select fields. For an example of how this works, see `Search Project by Empty Field`. Some fields (e.g. assignee_ids) can also filter for an empty value by specifying -2 as the ID.
 
@@ -26,25 +27,37 @@ To change the number of records returned, change the "page_size" parameter. E.g.
 
 Foonotes:
 1. Possible fields are: name, assigned_to, related_to, status, date_modified, date_created.
-,```POST {{base_url}}/projects/search```
-,### Headers
-,Key | Value | Description | Type
+
+```POST {{base_url}}/projects/search```
+
+### Headers
+
+Key | Value | Description | Type
 --- | --- | --- | ---
 X-PW-AccessToken | {{api_token}} | undefined | undefined
 X-PW-Application | developer_api | undefined | undefined
 X-PW-UserEmail | {{api_email}} | undefined | undefined
-Content-Type | application/json | undefined | undefined,### Body
-,```
+Content-Type | application/json | undefined | undefined
+### Body
+
+```
 {
   "page_size": 25,
   "sort_by": "name"
 }
-```,### Example Responses
-,- Search Projects by Custom Multi-Select Dropdown Set to Empty
-,200: OK,```json
+```
+### Example Responses
+
+- Search Projects by Custom Multi-Select Dropdown Set to Empty
+
+200: OK
+```json
 [{"id":2,"name":"Test Project","related_resource":null,"assignee_id":2,"status":"Open","details":null,"tags":[],"custom_fields":[{"custom_field_definition_id":8,"value":null},{"custom_field_definition_id":11,"value":null},{"custom_field_definition_id":9,"value":null},{"custom_field_definition_id":7,"value":false},{"custom_field_definition_id":3,"value":null},{"custom_field_definition_id":4,"value":null},{"custom_field_definition_id":12,"value":[]},{"custom_field_definition_id":10,"value":null},{"custom_field_definition_id":6,"value":null},{"custom_field_definition_id":5,"value":null}],"date_created":1516751006,"date_modified":1516751006}]
-```,- Projects Search
-,200: OK,```json
+```
+- Projects Search
+
+200: OK
+```json
 [
     {
         "id": 13358412,
@@ -324,8 +337,11 @@ Content-Type | application/json | undefined | undefined,### Body
         "date_modified": 1489018922
     }
 ]
-```,- Search Projects by Tags
-,200: OK,```json
+```
+- Search Projects by Tags
+
+200: OK
+```json
 [
     {
         "id": 1,
@@ -388,8 +404,11 @@ Content-Type | application/json | undefined | undefined,### Body
         "date_modified": 1516747365
     }
 ]
-```,- Search Projects by Custom Multi-Select Dropdown
-,200: OK,```json
+```
+- Search Projects by Custom Multi-Select Dropdown
+
+200: OK
+```json
 [
     {
         "id": 1,
@@ -452,8 +471,11 @@ Content-Type | application/json | undefined | undefined,### Body
         "date_modified": 1516747365
     }
 ]
-```,- Search Projects by Statuses
-,200: OK,```json
+```
+- Search Projects by Statuses
+
+200: OK
+```json
 [
     {
         "id": 1,
@@ -516,8 +538,11 @@ Content-Type | application/json | undefined | undefined,### Body
         "date_modified": 1516747365
     }
 ]
-```,- List Projects in Groups of 200
-,200: OK,```json
+```
+- List Projects in Groups of 200
+
+200: OK
+```json
 [
     {
         "id": 1,
@@ -633,8 +658,11 @@ Content-Type | application/json | undefined | undefined,### Body
         "date_modified": 1516751006
     }
 ]
-```,- Search Projects by Assignee Ids
-,200: OK,```json
+```
+- Search Projects by Assignee Ids
+
+200: OK
+```json
 [
     {
         "id": 1,
@@ -697,8 +725,11 @@ Content-Type | application/json | undefined | undefined,### Body
         "date_modified": 1516747365
     }
 ]
-```,- Search Projects by Custom Date Field
-,200: OK,```json
+```
+- Search Projects by Custom Date Field
+
+200: OK
+```json
 [
     {
         "id": 1,

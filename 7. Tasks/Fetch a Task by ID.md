@@ -1,14 +1,22 @@
 ## Fetch a Task by ID
-,undefined
-,```GET {{base_url}}/tasks/{{example_task_id}}```
-,### Headers
-,Key | Value | Description | Type
+
+undefined
+
+```GET {{base_url}}/tasks/{{example_task_id}}```
+
+### Headers
+
+Key | Value | Description | Type
 --- | --- | --- | ---
 X-PW-AccessToken | {{api_token}} | undefined | undefined
 X-PW-Application | developer_api | undefined | undefined
 X-PW-UserEmail | {{api_email}} | undefined | undefined
-Content-Type | application/json | undefined | undefined,### Example Responses
-,- Get Task
-,200: OK,```json
+Content-Type | application/json | undefined | undefined
+### Example Responses
+
+- Get Task
+
+200: OK
+```json
 {"id":3716920,"name":"My First Task","related_resource":{"id":144296,"type":"project"},"assignee_id":137658,"due_date":1496799000,"reminder_date":null,"completed_date":null,"priority":"None","status":"Open","details":null,"tags":[],"custom_fields":[],"date_created":1496712856,"date_modified":1496712857}
 ```

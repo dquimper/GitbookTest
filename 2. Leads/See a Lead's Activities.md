@@ -1,14 +1,20 @@
 ## See a Lead's Activities
-,This request will show the Activity entries created for a specific Lead. For more details please see the notes at the [/activities endpoint](https://dev.prosperworks.com).
-,```POST {{base_url}}/leads/{{example_lead_id}}/activities```
-,### Headers
-,Key | Value | Description | Type
+
+This request will show the Activity entries created for a specific Lead. For more details please see the notes at the [/activities endpoint](https://dev.prosperworks.com).
+
+```POST {{base_url}}/leads/{{example_lead_id}}/activities```
+
+### Headers
+
+Key | Value | Description | Type
 --- | --- | --- | ---
 X-PW-AccessToken | {{api_token}} | undefined | undefined
 X-PW-Application | developer_api | undefined | undefined
 X-PW-UserEmail | {{api_email}} | undefined | undefined
-Content-Type | application/json | undefined | undefined,### Body
-,```
+Content-Type | application/json | undefined | undefined
+### Body
+
+```
 {
   "activity_types": [
     {
@@ -17,9 +23,13 @@ Content-Type | application/json | undefined | undefined,### Body
     }
   ]
 }
-```,### Example Responses
-,- Lead Activities
-,200: OK,```json
+```
+### Example Responses
+
+- Lead Activities
+
+200: OK
+```json
 [
     {
         "id": 68,

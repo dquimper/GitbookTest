@@ -1,15 +1,23 @@
 ## Fetch a Project by ID
-,undefined
-,```GET {{base_url}}/projects/{{example_project_id}}```
-,### Headers
-,Key | Value | Description | Type
+
+undefined
+
+```GET {{base_url}}/projects/{{example_project_id}}```
+
+### Headers
+
+Key | Value | Description | Type
 --- | --- | --- | ---
 X-PW-AccessToken | {{api_token}} | undefined | undefined
 X-PW-Application | developer_api | undefined | undefined
 X-PW-UserEmail | {{api_email}} | undefined | undefined
-Content-Type | application/json | undefined | undefined,### Example Responses
-,- Get project
-,200: OK,```json
+Content-Type | application/json | undefined | undefined
+### Example Responses
+
+- Get project
+
+200: OK
+```json
 {
     "id": 144296,
     "name": "Customize Your New CRM",

@@ -1,15 +1,23 @@
 ## View subscription by ID
-,This is the description of the individual request
-,```GET {{base_url}}/webhooks{{example_webhook_id}}```
-,### Headers
-,Key | Value | Description | Type
+
+This is the description of the individual request
+
+```GET {{base_url}}/webhooks{{example_webhook_id}}```
+
+### Headers
+
+Key | Value | Description | Type
 --- | --- | --- | ---
 X-PW-AccessToken | {{api_token}} | undefined | undefined
 X-PW-Application | developer_api | undefined | undefined
 X-PW-UserEmail | {{api_email}} | undefined | undefined
-Content-Type | application/json | undefined | undefined,### Example Responses
-,- See Webhook by ID
-,200: OK,```json
+Content-Type | application/json | undefined | undefined
+### Example Responses
+
+- See Webhook by ID
+
+200: OK
+```json
 {
     "id": 25347,
     "target": "https://your.endpoint.here",

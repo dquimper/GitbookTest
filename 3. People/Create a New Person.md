@@ -1,14 +1,20 @@
 ## Create a New Person
-,undefined
-,```POST {{base_url}}/people```
-,### Headers
-,Key | Value | Description | Type
+
+undefined
+
+```POST {{base_url}}/people```
+
+### Headers
+
+Key | Value | Description | Type
 --- | --- | --- | ---
 X-PW-AccessToken | {{api_token}} | undefined | undefined
 X-PW-Application | developer_api | undefined | undefined
 X-PW-UserEmail | {{api_email}} | undefined | undefined
-Content-Type | application/json | undefined | undefined,### Body
-,```
+Content-Type | application/json | undefined | undefined
+### Body
+
+```
 {
   "name":"My Contact",
   "emails": [
@@ -31,8 +37,12 @@ Content-Type | application/json | undefined | undefined,### Body
     }
   ]
 }
-```,### Example Responses
-,- Create New Person
-,200: OK,```json
+```
+### Example Responses
+
+- Create New Person
+
+200: OK
+```json
 {"id":27140448,"name":"My Contact","prefix":null,"first_name":"My","middle_name":null,"last_name":"Contact","suffix":null,"address":null,"assignee_id":null,"company_id":null,"company_name":null,"contact_type_id":451492,"details":null,"emails":[{"email":"mycontact_1233@noemail.com","category":"work"}],"phone_numbers":[{"number":"415-123-45678","category":"mobile"}],"socials":[],"tags":[],"title":null,"websites":[],"custom_fields":[{"custom_field_definition_id":100764,"value":null},{"custom_field_definition_id":103481,"value":null}],"date_created":1490045450,"date_modified":1490045450}
 ```

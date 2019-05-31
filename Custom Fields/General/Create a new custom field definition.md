@@ -1,5 +1,6 @@
 ## Create a new custom field definition
-,| Field                 | Type          | Details | Default |
+
+| Field                 | Type          | Details | Default |
 | --------------------- | ------------- | ----------------------- | ---------------------- |
 | name*              | string | Name of the Custom Field Definition                     |                      |
 | data_type*                  | string | One of the following strings: "Checkbox", "Currency", “Date", "Dropdown", "Float", "MultiSelect", "Percentage", “String", "Text", "URL" |                      |
@@ -7,15 +8,20 @@
 | options          | integer array       | Array of options for Dropdown and MultiSelect fields.  A minimum of one option is required for Dropdown and a minimum of 2 options is required for MultiSelect                      |                      |
 | currency            | string | 3-letter country code (e.g., "USD", "CAD")                     |                      |
 |\* indicates a required field| | |
-,```POST {{base_url}}/custom_field_definitions```
-,### Headers
-,Key | Value | Description | Type
+
+```POST {{base_url}}/custom_field_definitions```
+
+### Headers
+
+Key | Value | Description | Type
 --- | --- | --- | ---
 X-PW-AccessToken | {{api_token}} | undefined | undefined
 X-PW-Application | developer_api | undefined | undefined
 X-PW-UserEmail | {{api_email}} | undefined | undefined
-Content-Type | application/json | undefined | undefined,### Body
-,```
+Content-Type | application/json | undefined | undefined
+### Body
+
+```
 {
   "name": "A Dropdown",
   "data_type": "Dropdown",
@@ -29,9 +35,13 @@ Content-Type | application/json | undefined | undefined,### Body
   	}
   ]
 }
-```,### Example Responses
-,- Create a Currency Custom Field
-,200: OK,```json
+```
+### Example Responses
+
+- Create a Currency Custom Field
+
+200: OK
+```json
 {
     "id": 6,
     "name": "My Currency",
@@ -43,8 +53,11 @@ Content-Type | application/json | undefined | undefined,### Body
     ],
     "currency": "CAD"
 }
-```,- Create a Dropdown Custom Field
-,200: OK,```json
+```
+- Create a Dropdown Custom Field
+
+200: OK
+```json
 {
     "id": 5,
     "name": "A Dropdown",
@@ -70,8 +83,11 @@ Content-Type | application/json | undefined | undefined,### Body
         }
     ]
 }
-```,- Create a String Custom Field
-,200: OK,```json
+```
+- Create a String Custom Field
+
+200: OK
+```json
 {
     "id": 7,
     "name": "A String",
