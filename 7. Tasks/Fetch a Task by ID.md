@@ -1,4 +1,5 @@
-## Fetch a Task by ID,undefined
+## Fetch a Task by ID
+,undefined
 ,```GET {{base_url}}/tasks/{{example_task_id}}```
 ,### Headers
 ,Key | Value | Description | Type

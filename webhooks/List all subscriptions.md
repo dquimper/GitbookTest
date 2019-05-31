@@ -1,4 +1,5 @@
-## List all subscriptions,This is the description of the individual request
+## List all subscriptions
+,This is the description of the individual request
 ,```GET {{base_url}}/webhooks```
 ,### Headers
 ,Key | Value | Description | Type

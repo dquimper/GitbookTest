@@ -1,4 +1,5 @@
-## List Opportunities (Search),The /search endpoint provides the ability to list records and sort the results by certain parameters. When multiple ciriteria are provided then records meeting ALL criteria will be returned (the filtering criteria have an 'AND' relationship).
+## List Opportunities (Search)
+,The /search endpoint provides the ability to list records and sort the results by certain parameters. When multiple ciriteria are provided then records meeting ALL criteria will be returned (the filtering criteria have an 'AND' relationship).
 
 To see examples of search request using the various parameters, click on the `Opportunities Search` dropdown on the right.Certain fields can be filtered by an empty value, i.e., filter records where the field is not specified. For Opportunities, these fields are: company_ids, tags, custom dropdown, custom multi-select fields. For an example of how this works, see `Search Opportunities by Empty Field`. Some fields (e.g. assignee_ids) can also filter for an empty value by specifying -2 as the ID.
 

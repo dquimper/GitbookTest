@@ -1,4 +1,5 @@
-## List Loss Reasons,Loss Reasons identify why a particular Opportunity was lost. The Loss Reasons API allows you to retrieve the list of Loss Reasons associated with your Copper account.
+## List Loss Reasons
+,Loss Reasons identify why a particular Opportunity was lost. The Loss Reasons API allows you to retrieve the list of Loss Reasons associated with your Copper account.
 
 
 |     Field     |              Description               |

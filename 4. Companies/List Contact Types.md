@@ -1,4 +1,5 @@
-## List Contact Types,Contact Types are categories into which you can place your People and Companies to classify your relationships with them. The Contact Types API allows you to retrieve the list of Contact Types associated with your Copper account.
+## List Contact Types
+,Contact Types are categories into which you can place your People and Companies to classify your relationships with them. The Contact Types API allows you to retrieve the list of Contact Types associated with your Copper account.
 
 
 |Field|Type|Details|

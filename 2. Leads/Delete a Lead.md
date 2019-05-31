@@ -1,4 +1,5 @@
-## Delete a Lead,This request permanently removes a Lead from your Copper account.
+## Delete a Lead
+,This request permanently removes a Lead from your Copper account.
 ,```DELETE {{base_url}}/leads/{{example_lead_id}}```
 ,### Headers
 ,Key | Value | Description | Type

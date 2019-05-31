@@ -1,4 +1,5 @@
-## List Lead Statuses,Lead statuses are values that can be assigned to a Lead entity to indicate where they are in the qualification process.
+## List Lead Statuses
+,Lead statuses are values that can be assigned to a Lead entity to indicate where they are in the qualification process.
 
 |        Field         |                                  Description                                   |
 | -------------------- | ------------------------------------------------------------------------------ |

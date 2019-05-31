@@ -1,4 +1,5 @@
-## Delete an Opportunity,This request permanently removes a record from your Copper account.
+## Delete an Opportunity
+,This request permanently removes a record from your Copper account.
 ,```DELETE {{base_url}}/opportunities/{{delete_opportunity_id}}```
 ,### Headers
 ,Key | Value | Description | Type

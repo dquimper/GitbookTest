@@ -1,4 +1,5 @@
-## List All Custom Activity Types,undefined
+## List All Custom Activity Types
+,undefined
 ,```GET {{base_url}}/custom_activity_types```
 ,### Headers
 ,Key | Value | Description | Type

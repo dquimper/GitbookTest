@@ -1,4 +1,5 @@
-## Fetch a Custom Field Definition,undefined
+## Fetch a Custom Field Definition
+,undefined
 ,```GET {{base_url}}/custom_field_definitions/{{custom_field_definition_id}}```
 ,### Headers
 ,Key | Value | Description | Type

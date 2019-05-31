@@ -1,4 +1,5 @@
-## Update a Company,Updates are only applied to fields explicitly specified in the request body. For example, if an update request is made with an empty body, no updates will be made. To remove the value from a field, the request body must specify the target field value as 'null'.
+## Update a Company
+,Updates are only applied to fields explicitly specified in the request body. For example, if an update request is made with an empty body, no updates will be made. To remove the value from a field, the request body must specify the target field value as 'null'.
 ,```PUT {{base_url}}/companies/{{example_company_id}}```
 ,### Headers
 ,Key | Value | Description | Type

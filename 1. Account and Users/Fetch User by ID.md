@@ -1,4 +1,5 @@
-## Fetch User by ID,undefined
+## Fetch User by ID
+,undefined
 ,```GET {{base_url}}/users/{{example_user_id}}```
 ,### Headers
 ,Key | Value | Description | Type

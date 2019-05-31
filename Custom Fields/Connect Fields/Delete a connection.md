@@ -1,4 +1,5 @@
-## Delete a connection,To delete already existing connections in the connect field, use the delete a connection API.
+## Delete a connection
+,To delete already existing connections in the connect field, use the delete a connection API.
 ,```DELETE {{base_url}}/related_links/{{connection_id}}```
 ,### Headers
 ,Key | Value | Description | Type

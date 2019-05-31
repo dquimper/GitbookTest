@@ -1,4 +1,5 @@
-## List Pipeline Stages,Pipeline Stages define the positions of Opportunities within their Pipelines. The Pipeline Stages API allows you to retrieve the list of Pipeline Stages associated with your Copper account.
+## List Pipeline Stages
+,Pipeline Stages define the positions of Opportunities within their Pipelines. The Pipeline Stages API allows you to retrieve the list of Pipeline Stages associated with your Copper account.
 
 
 |          Field           |                                                     Details                                                      |

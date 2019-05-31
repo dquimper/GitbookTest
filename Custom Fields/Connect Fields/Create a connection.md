@@ -1,4 +1,5 @@
-## Create a connection,Once you have created connect fields, use the create a connection API to add connections to the connect field.
+## Create a connection
+,Once you have created connect fields, use the create a connection API to add connections to the connect field.
 ,```POST {{base_url}}/related_links```
 ,### Headers
 ,Key | Value | Description | Type

@@ -1,4 +1,5 @@
-## Fetch a Lead by ID,undefined
+## Fetch a Lead by ID
+,undefined
 ,```GET {{base_url}}/leads/{{example_lead_id}}```
 ,### Headers
 ,Key | Value | Description | Type

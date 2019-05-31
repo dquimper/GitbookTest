@@ -1,4 +1,5 @@
-## Create a New Person,undefined
+## Create a New Person
+,undefined
 ,```POST {{base_url}}/people```
 ,### Headers
 ,Key | Value | Description | Type

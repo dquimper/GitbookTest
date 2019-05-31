@@ -1,4 +1,5 @@
-## Create a New Activity,undefined
+## Create a New Activity
+,undefined
 ,```POST {{base_url}}/activities```
 ,### Headers
 ,Key | Value | Description | Type

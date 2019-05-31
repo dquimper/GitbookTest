@@ -1,4 +1,5 @@
-## See a Company's Activities,This request will show the Activity entries created for a specific Company. For more details please see the notes at the [/activities endpoint](https://dev.prosperworks.com).
+## See a Company's Activities
+,This request will show the Activity entries created for a specific Company. For more details please see the notes at the [/activities endpoint](https://dev.prosperworks.com).
 ,```POST {{base_url}}/companies/{{example_company_id}}/activities```
 ,### Headers
 ,Key | Value | Description | Type

@@ -1,4 +1,5 @@
-## List Customer Sources,Customer Sources identify where a particular Lead or Opportunity came from. The Customer Sources API allows you to retrieve the list of Customer Sources associated with your Copper account.
+## List Customer Sources
+,Customer Sources identify where a particular Lead or Opportunity came from. The Customer Sources API allows you to retrieve the list of Customer Sources associated with your Copper account.
 
 |Field|Details|
 |---|---|

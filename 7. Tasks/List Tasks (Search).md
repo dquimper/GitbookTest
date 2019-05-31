@@ -1,4 +1,5 @@
-## List Tasks (Search),The /search endpoint provides the ability to list people and sort the results by certain parameters. When multiple ciriteria are provided records meeting ALL criteria will be returned (the filtering criteria have an 'AND' relationship).
+## List Tasks (Search)
+,The /search endpoint provides the ability to list people and sort the results by certain parameters. When multiple ciriteria are provided records meeting ALL criteria will be returned (the filtering criteria have an 'AND' relationship).
 
 To see examples of search request using the various parameters, click on the `Tasks Search` dropdown on the right. Certain fields can be filtered by an empty value, i.e., filter records where the field is not specified. For Tasks, these fields are: company, opportunity, city, state, postal_code, tags, custom dropdown, custom multi-select fields. Some fields (e.g. assignee_ids) can also filter for an empty value by specifying -2 as the ID.
 

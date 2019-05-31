@@ -1,4 +1,5 @@
-## Remove relationship between record and Entity,Removing the relationship does not cause any of the records involved to be deleted from the system.
+## Remove relationship between record and Entity
+,Removing the relationship does not cause any of the records involved to be deleted from the system.
 ,```DELETE {{base_url}}/{{entity}}/{{entity_id}}/related```
 ,### Headers
 ,Key | Value | Description | Type

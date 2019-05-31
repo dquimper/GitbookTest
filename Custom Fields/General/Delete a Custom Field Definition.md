@@ -1,4 +1,5 @@
-## Delete a Custom Field Definition,undefined
+## Delete a Custom Field Definition
+,undefined
 ,```DELETE {{base_url}}/custom_field_definitions/{{custom_field_definition_id}}```
 ,### Headers
 ,Key | Value | Description | Type

@@ -1,4 +1,5 @@
-## UPSERT a Lead,**Functionality**
+## UPSERT a Lead
+,**Functionality**
 
 "Upsert" (update + insert) will atomically do the following:
 1. Check for the existence of a Lead matching certain criteria

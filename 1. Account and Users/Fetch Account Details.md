@@ -1,4 +1,5 @@
-## Fetch Account Details,undefined
+## Fetch Account Details
+,undefined
 ,```GET {{base_url}}/account```
 ,### Headers
 ,Key | Value | Description | Type

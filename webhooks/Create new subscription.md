@@ -1,4 +1,5 @@
-## Create new subscription,"event" = "new" | "update" | "delete"
+## Create new subscription
+,"event" = "new" | "update" | "delete"
 
 "type" = "lead" | "person" | "company" | "opportunity" | "project" | "task"
 

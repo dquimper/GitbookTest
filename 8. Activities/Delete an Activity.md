@@ -1,4 +1,5 @@
-## Delete an Activity,This request permanently removes a record from your Copper account.
+## Delete an Activity
+,This request permanently removes a record from your Copper account.
 ,```DELETE {{base_url}}/activities/{{delete_activity_id}}```
 ,### Headers
 ,Key | Value | Description | Type

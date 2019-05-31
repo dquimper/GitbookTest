@@ -1,4 +1,5 @@
-## See a Lead's Activities,This request will show the Activity entries created for a specific Lead. For more details please see the notes at the [/activities endpoint](https://dev.prosperworks.com).
+## See a Lead's Activities
+,This request will show the Activity entries created for a specific Lead. For more details please see the notes at the [/activities endpoint](https://dev.prosperworks.com).
 ,```POST {{base_url}}/leads/{{example_lead_id}}/activities```
 ,### Headers
 ,Key | Value | Description | Type

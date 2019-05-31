@@ -1,4 +1,5 @@
-## See a Person's Activities,This request will show the Activity entries created for a specific Person. For more details please see the notes at the [/activities endpoint](https://dev.prosperworks.com).
+## See a Person's Activities
+,This request will show the Activity entries created for a specific Person. For more details please see the notes at the [/activities endpoint](https://dev.prosperworks.com).
 ,```POST {{base_url}}/people/{{example_person_id}}/activities```
 ,### Headers
 ,Key | Value | Description | Type

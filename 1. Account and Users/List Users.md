@@ -1,4 +1,5 @@
-## List Users,**Parameters**
+## List Users
+,**Parameters**
 
 You can include the following parameters in a search request.
 

@@ -1,4 +1,5 @@
-## Delete a Company,This request permanently removes a Company from your Copper account.
+## Delete a Company
+,This request permanently removes a Company from your Copper account.
 ,```DELETE {{base_url}}/companies/{{delete_company_id}}```
 ,### Headers
 ,Key | Value | Description | Type

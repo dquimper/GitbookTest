@@ -1,4 +1,5 @@
-## List the connections on specified entity,To retrieve already existing connections in the connect field, use the list the connections API.
+## List the connections on specified entity
+,To retrieve already existing connections in the connect field, use the list the connections API.
 ,```GET {{base_url}}/related_links?custom_field_definition_id={{custom_field_definition_id}}&source_type={{source_type}}&source_id={{source_id}}```
 ,### Parameters
 

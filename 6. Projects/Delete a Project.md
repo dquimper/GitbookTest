@@ -1,4 +1,5 @@
-## Delete a Project,This request permanently removes a record from your Copper account.
+## Delete a Project
+,This request permanently removes a record from your Copper account.
 ,```DELETE {{base_url}}/projects/{{delete_project_id}}```
 ,### Headers
 ,Key | Value | Description | Type

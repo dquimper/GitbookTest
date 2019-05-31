@@ -1,4 +1,5 @@
-## Delete a Task,This request permanently removes a record from your Copper account.
+## Delete a Task
+,This request permanently removes a record from your Copper account.
 ,```DELETE {{base_url}}/tasks/{{delete_task_id}}```
 ,### Headers
 ,Key | Value | Description | Type

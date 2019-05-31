@@ -1,4 +1,5 @@
-## Search Opportunities by Name,This example demonstrates how to search Opportunities by name. The name has to be an exact match for the search to be successful.
+## Search Opportunities by Name
+,This example demonstrates how to search Opportunities by name. The name has to be an exact match for the search to be successful.
 ,```POST {{base_url}}/opportunities/search```
 ,### Headers
 ,Key | Value | Description | Type

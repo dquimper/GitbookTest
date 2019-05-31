@@ -1,4 +1,5 @@
-## List Stages in a Pipeline,undefined
+## List Stages in a Pipeline
+,undefined
 ,```GET {{base_url}}/pipeline_stages/pipeline/{pipeline_id}```
 ,### Headers
 ,Key | Value | Description | Type

@@ -1,4 +1,5 @@
-## Search Entity (Leads, People, etc) by Custom Field,Custom fields are available for each of the entities (Leads, People, Companies, Opportunities, Projects, and Tasks). Custom field types include: Text Field, Text Area, Dropdown, Date, Checkbox, Number Field, URL, Percentage, Currency, and Multi-Select Dropdown. Text fields are not searchable at this point. The table below summarizes the behavior of each of these fields.
+## Search Entity (Leads, People, etc) by Custom Field
+,Custom fields are available for each of the entities (Leads, People, Companies, Opportunities, Projects, and Tasks). Custom field types include: Text Field, Text Area, Dropdown, Date, Checkbox, Number Field, URL, Percentage, Currency, and Multi-Select Dropdown. Text fields are not searchable at this point. The table below summarizes the behavior of each of these fields.
 
 | Field                 | Type          | Search for Empty Value? | Any, All, None Options |
 | --------------------- | ------------- | ----------------------- | ---------------------- |

@@ -1,4 +1,5 @@
-## Create a New Company ,undefined
+## Create a New Company 
+,undefined
 ,```POST {{base_url}}/companies```
 ,### Headers
 ,Key | Value | Description | Type

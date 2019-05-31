@@ -1,4 +1,5 @@
-## View all records of a given Entity Type related to an Entity,undefined
+## View all records of a given Entity Type related to an Entity
+,undefined
 ,```GET {{base_url}}/{{entity}}/{{entity_id}}/related/{{related_entity_name}}```
 ,### Headers
 ,Key | Value | Description | Type

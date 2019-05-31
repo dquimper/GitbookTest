@@ -1,4 +1,5 @@
-## List Custom Field Definitions,Custom Field Definitions specify account specific fields not included as part of the standard resource fields and allows Copper to be customized to your specific workflow. The Custom Field Definitions API allows you to retrieve the list of Custom Field Definitions associated with your Copper account.
+## List Custom Field Definitions
+,Custom Field Definitions specify account specific fields not included as part of the standard resource fields and allows Copper to be customized to your specific workflow. The Custom Field Definitions API allows you to retrieve the list of Custom Field Definitions associated with your Copper account.
 
 |   Field   |     Type      |                                                                            Details                                                                             |
 | --------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |

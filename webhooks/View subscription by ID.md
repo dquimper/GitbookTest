@@ -1,4 +1,5 @@
-## View subscription by ID,This is the description of the individual request
+## View subscription by ID
+,This is the description of the individual request
 ,```GET {{base_url}}/webhooks{{example_webhook_id}}```
 ,### Headers
 ,Key | Value | Description | Type

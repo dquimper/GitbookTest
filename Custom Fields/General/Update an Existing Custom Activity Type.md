@@ -1,4 +1,5 @@
-## Update an Existing Custom Activity Type,|   Field                     | Type   |  Details  |  Default  |
+## Update an Existing Custom Activity Type
+,|   Field                     | Type   |  Details  |  Default  |
 | --------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------- | - |
 | name                        | string | Name of the custom activity type.                                                                                                              |   |
 | icon_type                   | string | Icon Type. Must be one of: "Message", "Phone", "Event", "Assignment", "Assessment", "Group", "Description", "Speaker Notes", "Forum", "Web", "Loyalty", "Content Paste", "Headset", "Share", "Navigation", "Notification", "Voicemail", "Room", "Edit", "Send", "Videocam", "Play Arrow", "Grocery Store", "Mic", "Camera Mic", "Todo" | |

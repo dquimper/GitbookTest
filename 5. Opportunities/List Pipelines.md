@@ -1,4 +1,5 @@
-## List Pipelines,Pipelines define the stages through which Opportunities move as they progress through your sales process. The Pipelines API allows you to retrieve the list of Pipelines associated with your Copper account.
+## List Pipelines
+,Pipelines define the stages through which Opportunities move as they progress through your sales process. The Pipelines API allows you to retrieve the list of Pipelines associated with your Copper account.
 
 
 |     Field     |                    Details                    |

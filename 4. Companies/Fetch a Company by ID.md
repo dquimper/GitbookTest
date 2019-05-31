@@ -1,4 +1,5 @@
-## Fetch a Company by ID,undefined
+## Fetch a Company by ID
+,undefined
 ,```GET {{base_url}}/companies/{{example_company_id}}```
 ,### Headers
 ,Key | Value | Description | Type

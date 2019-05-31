@@ -1,4 +1,5 @@
-## Delete a Person,This request permanently removes a Person from your Copper account.
+## Delete a Person
+,This request permanently removes a Person from your Copper account.
 ,```DELETE {{base_url}}/people/{{example_person_id}}```
 ,### Headers
 ,Key | Value | Description | Type

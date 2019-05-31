@@ -1,4 +1,5 @@
-## Fetch a Person by Email,Email address is a unique key for People records in Copper. You can fetch a Person by it's email address using this operation.
+## Fetch a Person by Email
+,Email address is a unique key for People records in Copper. You can fetch a Person by it's email address using this operation.
 ,```POST {{base_url}}/people/fetch_by_email```
 ,### Headers
 ,Key | Value | Description | Type

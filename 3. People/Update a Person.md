@@ -1,4 +1,5 @@
-## Update a Person,Updates are only applied to fields explicitly specified in the request body. For example, if an update request is made with an empty body, no updates will be made. To remove the value from a field, the request body must specify the target field value as 'null'.
+## Update a Person
+,Updates are only applied to fields explicitly specified in the request body. For example, if an update request is made with an empty body, no updates will be made. To remove the value from a field, the request body must specify the target field value as 'null'.
 
 The field `company_id` is returned in the JSON response, However, if you would like to unrelate and relate a new `company_id`, use the related items API call to delete and then add a new `company_id` to the person record. For more info, see `Related Items` folder.
 ,```PUT {{base_url}}/people/{{example_person_id}}```

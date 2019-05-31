@@ -1,4 +1,5 @@
-## Create a New Opportunity,The following fields are required for this request:
+## Create a New Opportunity
+,The following fields are required for this request:
 
 "name"
 

@@ -1,4 +1,5 @@
-## Relate an existing record to an Entity,Please note that when relating records this way, both records have to exist in the system already.
+## Relate an existing record to an Entity
+,Please note that when relating records this way, both records have to exist in the system already.
 ,```POST {{base_url}}/{{entity}}/{{entity_id}}/related```
 ,### Headers
 ,Key | Value | Description | Type

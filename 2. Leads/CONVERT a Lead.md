@@ -1,4 +1,5 @@
-## CONVERT a Lead,This request creates a Person record from a Lead record. Optionally, a Company and an Opportunity record can be created as well in the same process. The Lead record is removed after it has been converted.
+## CONVERT a Lead
+,This request creates a Person record from a Lead record. Optionally, a Company and an Opportunity record can be created as well in the same process. The Lead record is removed after it has been converted.
 
 | Field       | Type   | Details |
 | -----       | ----   | ------- |

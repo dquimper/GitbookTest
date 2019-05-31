@@ -1,4 +1,5 @@
-## List Activity Types,Activity Types identify the types of Activities that occur in Copper. The Activity Types Developer API allows you to retrieve the list of Activity Types associated with your Copper account. There are two categories of Activity Type.
+## List Activity Types
+,Activity Types identify the types of Activities that occur in Copper. The Activity Types Developer API allows you to retrieve the list of Activity Types associated with your Copper account. There are two categories of Activity Type.
 
 
 Activity Types with category "user" describe user-entered Activities. By default, Copper has three user-entered activity types: Notes, Phone Calls, and Meetings. Notes have a hard-coded ID of 0. Phone Calls and Meetings are assigned IDs when your Copper account is created. Users may also create Custom Activity Types through the Settings page. These will be assigned IDs when they are created.

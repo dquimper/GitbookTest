@@ -1,4 +1,5 @@
-## Fetch an Activity by ID,undefined
+## Fetch an Activity by ID
+,undefined
 ,```GET {{base_url}}/activities/{{example_activity_id}}```
 ,### Headers
 ,Key | Value | Description | Type

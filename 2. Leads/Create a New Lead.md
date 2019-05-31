@@ -1,4 +1,5 @@
-## Create a New Lead,undefined
+## Create a New Lead
+,undefined
 ,```POST {{base_url}}/leads```
 ,### Headers
 ,Key | Value | Description | Type

@@ -1,4 +1,5 @@
-## Fetch an Opportunity by ID,undefined
+## Fetch an Opportunity by ID
+,undefined
 ,```GET {{base_url}}/opportunities/{{example_opportunity_id}}```
 ,### Headers
 ,Key | Value | Description | Type

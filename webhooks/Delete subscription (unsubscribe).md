@@ -1,4 +1,5 @@
-## Delete subscription (unsubscribe),This is the description of the individual request
+## Delete subscription (unsubscribe)
+,This is the description of the individual request
 ,```DELETE {{base_url}}/webhooks/{{example_webhook_id}}```
 ,### Headers
 ,Key | Value | Description | Type

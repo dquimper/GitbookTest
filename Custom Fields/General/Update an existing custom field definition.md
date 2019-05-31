@@ -1,4 +1,5 @@
-## Update an existing custom field definition,| Field                 | Type          | Details | Default |
+## Update an existing custom field definition
+,| Field                 | Type          | Details | Default |
 | --------------------- | ------------- | ----------------------- | ---------------------- |
 | name*              | string | Name of the Custom Field Definition                     |                      |
 | data_type*                  | string | One of the following strings: "Checkbox", "Currency", “Date", "Dropdown", "Float", "MultiSelect", "Percentage", “String", "Text", "URL" |                      |

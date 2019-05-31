@@ -1,4 +1,5 @@
-## Fetch a Project by ID,undefined
+## Fetch a Project by ID
+,undefined
 ,```GET {{base_url}}/projects/{{example_project_id}}```
 ,### Headers
 ,Key | Value | Description | Type

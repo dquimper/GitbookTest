@@ -1,4 +1,5 @@
-## List Activities (Search),The /search endpoint provides the ability to list records and sort the results by certain parameters. When multiple ciriteria are provided records meeting ALL criteria will be returned (the filtering criteria have an 'AND' relationship).
+## List Activities (Search)
+,The /search endpoint provides the ability to list records and sort the results by certain parameters. When multiple ciriteria are provided records meeting ALL criteria will be returned (the filtering criteria have an 'AND' relationship).
 
 To see examples of search request using the various parameters, click on the `Search Activities` dropdown on the right.
 
