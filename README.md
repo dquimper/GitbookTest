@@ -1,4 +1,4 @@
-# Initial page
+# Introduction
 
 ## Copper Developer API
 
