@@ -1,11 +1,6 @@
-# Gitbook Test
+# Page 2
 
 This is a test
-
-### Links
-* [[page1]]
-* [page2]
-* [page3](page3)
 
 ## Title 1
 
