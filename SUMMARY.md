@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Gitbook Test](README.md)
+* [Gitbook Test \(1.0.0\)](README.md)
 * [Page 1](page1.md)
 * [Page 2](page2.md)
 * [Not a page](not-a-page.md)
