@@ -5,7 +5,7 @@ This is a test
 ### Links
 * [[page1]]
 * [page2]
-* [page3](page3)
+* [page3](page3.md)
 
 ## Title 1
 
