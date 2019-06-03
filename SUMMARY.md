@@ -1,12 +1,12 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [1. Account and Users](1.-account-and-users/README.md)
+* 1. Account and Users
   * [Overview](1.-account-and-users/overview.md)
   * [Fetch Account Details](1.-account-and-users/fetch-account-details.md)
   * [Fetch User by ID](1.-account-and-users/fetch-user-by-id.md)
   * [List Users](1.-account-and-users/list-users.md)
-* [2. Leads](2.-leads/README.md)
+* 2. Leads
   * [Overview](2.-leads/overview.md)
   * [Fetch a Lead by ID](2.-leads/fetch-a-lead-by-id.md)
   * [Create a New Lead](2.-leads/create-a-new-lead.md)
@@ -19,7 +19,7 @@
   * [See a Lead's Activities](2.-leads/see-a-leads-activities.md)
   * [List Customer Sources](2.-leads/list-customer-sources.md)
   * [List Lead Statuses](2.-leads/list-lead-statuses.md)
-* [3. People](3.-people/README.md)
+* 3. People
   * [Overview](3.-people/overview.md)
   * [Fetch a Person by ID](3.-people/fetch-a-person-by-id.md)
   * [Fetch a Person by Email](3.-people/fetch-a-person-by-email.md)
@@ -29,7 +29,7 @@
   * [List People \(Search\)](3.-people/list-people-search.md)
   * [See a Person's Activities](3.-people/see-a-persons-activities.md)
   * [List Contact Types](3.-people/list-contact-types.md)
-* [4. Companies](4.-companies/README.md)
+* 4. Companies
   * [Overview](4.-companies/overview.md)
   * [Fetch a Company by ID](4.-companies/fetch-a-company-by-id.md)
   * [Create a New Company](4.-companies/create-a-new-company.md)
@@ -38,7 +38,7 @@
   * [List Companies \(Search\)](4.-companies/list-companies-search.md)
   * [See a Company's Activities](4.-companies/see-a-companys-activities.md)
   * [List Contact Types](4.-companies/list-contact-types.md)
-* [5. Opportunities](5.-opportunities/README.md)
+* 5. Opportunities
   * [Overview](5.-opportunities/overview.md)
   * [Fetch an Opportunity by ID](5.-opportunities/fetch-an-opportunity-by-id.md)
   * [Create a New Opportunity](5.-opportunities/create-a-new-opportunity.md)
@@ -51,29 +51,29 @@
   * [List Pipelines](5.-opportunities/list-pipelines.md)
   * [List Pipeline Stages](5.-opportunities/list-pipeline-stages.md)
   * [List Stages in a Pipeline](5.-opportunities/list-stages-in-a-pipeline.md)
-* [6. Projects](6.-projects/README.md)
+* 6. Projects
   * [Overview](6.-projects/overview.md)
   * [Fetch a Project by ID](6.-projects/fetch-a-project-by-id.md)
   * [Create a New Project](6.-projects/create-a-new-project.md)
   * [Update a Project](6.-projects/update-a-project.md)
   * [Delete a Project](6.-projects/delete-a-project.md)
   * [List Projects \(Search\)](6.-projects/list-projects-search.md)
-* [7. Tasks](7.-tasks/README.md)
+* 7. Tasks
   * [Overview](7.-tasks/overview.md)
   * [Fetch a Task by ID](7.-tasks/fetch-a-task-by-id.md)
   * [Create a New Task](7.-tasks/create-a-new-task.md)
   * [Update a Task](7.-tasks/update-a-task.md)
   * [Delete a Task](7.-tasks/delete-a-task.md)
   * [List Tasks \(Search\)](7.-tasks/list-tasks-search.md)
-* [8. Activities](8.-Activities)
+* 8. Activities
   * [Overview](8.-Activities/overview.md)
   * [Fetch an Activity by ID](8.-Activities/fetch-an-activity-by-id.md)
   * [Create a New Activity](8.-Activities/create-a-new-activity.md)
   * [Delete an Activity](8.-Activities/delete-an-activity.md)
   * [List Activities (Search)](8.-Activities/list-activities.md)
   * [List Activity Types](8.-Activities/list-activity-types.md)
-* [Custom Fields](custom-fields/README.md)
-  * [General](custom-fields/general/README.md)
+* Custom Fields
+  * General
     * [Overview](custom-fields/general/overview.md)
     * [Search Entity \(Leads, People, etc\) by Custom Field](custom-fields/general/search-entity-leads-people-etc-by-custom-field.md)
     * [List All Custom Activity Types](custom-fields/general/list-all-custom-activity-types.md)
@@ -86,18 +86,18 @@
     * [Update an existing custom field definition](custom-fields/general/update-an-existing-custom-field-definition.md)
     * [Delete a Custom Field Definition](custom-fields/general/delete-a-custom-field-definition.md)
     * [Fetch a Custom Field Definition](custom-fields/general/fetch-a-custom-field-definition.md)
-  * [Connect Fields](custom-fields/connect-fields/README.md)
+  * Connect Fields
     * [Overview](custom-fields/connect-fields/overview.md)
     * [List the connections on specified entity](custom-fields/connect-fields/list-the-connections-on-specified-entity.md)
     * [Create a connection](custom-fields/connect-fields/create-a-connection.md)
     * [Delete a connection](custom-fields/connect-fields/delete-a-connection.md)
-* [Related Items](related-items/README.md)
+* Related Items
   * [Overview](related-items/overview.md)
   * [View all records of a given Entity Type related to an Entity](related-items/view-all-records-of-a-given-entity-type-related-to-an-entity.md)
   * [View all records related to an Entity](related-items/view-all-records-related-to-an-entity.md)
   * [Relate an existing record to an Entity](related-items/relate-an-existing-record-to-an-entity.md)
   * [Remove relationship between record and Entity](related-items/remove-relationship-between-record-and-entity.md)
-* [Webhooks](webhooks/README.md)
+* Webhooks
   * [Create new subscription](webhooks/create-new-subscription.md)
   * [Delete subscription \(unsubscribe\)](webhooks/delete-subscription-unsubscribe.md)
   * [List all subscriptions](webhooks/list-all-subscriptions.md)
