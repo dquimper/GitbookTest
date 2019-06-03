@@ -1,6 +1,6 @@
 ## List the connections on specified entity
 
-```GET {{base_url}}/related_links?custom_field_definition_id={{custom_field_definition_id}}&source_type={{source_type}}&source_id={{source_id}}```
+```GET https://api.prosperworks.com/developer_api/v1/related_links?custom_field_definition_id={{custom_field_definition_id}}&source_type={{source_type}}&source_id={{source_id}}```
 
 To retrieve already existing connections in the connect field, use the list the connections API.
 
@@ -17,10 +17,10 @@ source_id | {{source_id}} | The Copper record id for the specified entity type
 
 Key | Value | Description | Type
 --- | --- | --- | ---
-X-PW-AccessToken | {{api_token}} | undefined | undefined
-X-PW-Application | developer_api | undefined | undefined
-X-PW-UserEmail | {{api_email}} | undefined | undefined
-Content-Type | application/json | undefined | undefined
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
 ### Example Responses
 
 - List the connections on specified entity

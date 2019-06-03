@@ -1,6 +1,6 @@
 ## Delete a Lead
 
-```DELETE {{base_url}}/leads/{{example_lead_id}}```
+```DELETE https://api.prosperworks.com/developer_api/v1/leads/{{example_lead_id}}```
 
 This request permanently removes a Lead from your Copper account.
 
@@ -8,10 +8,10 @@ This request permanently removes a Lead from your Copper account.
 
 Key | Value | Description | Type
 --- | --- | --- | ---
-X-PW-AccessToken | {{api_token}} | undefined | undefined
-X-PW-Application | developer_api | undefined | undefined
-X-PW-UserEmail | {{api_email}} | undefined | undefined
-Content-Type | application/json | undefined | undefined
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
 ### Body
 
 ```

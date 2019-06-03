@@ -1,6 +1,6 @@
 ## List Lead Statuses
 
-```GET {{base_url}}/lead_statuses```
+```GET https://api.prosperworks.com/developer_api/v1/lead_statuses```
 
 Lead statuses are values that can be assigned to a Lead entity to indicate where they are in the qualification process.
 
@@ -15,10 +15,10 @@ Lead statuses are values that can be assigned to a Lead entity to indicate where
 
 Key | Value | Description | Type
 --- | --- | --- | ---
-X-PW-AccessToken | {{api_token}} | undefined | undefined
-X-PW-Application | developer_api | undefined | undefined
-X-PW-UserEmail | {{api_email}} | undefined | undefined
-Content-Type | application/json | undefined | undefined
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
 ### Example Responses
 
 - Lead Statuses

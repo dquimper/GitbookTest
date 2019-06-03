@@ -1,6 +1,6 @@
 ## Remove relationship between record and Entity
 
-```DELETE {{base_url}}/{{entity}}/{{entity_id}}/related```
+```DELETE https://api.prosperworks.com/developer_api/v1/{{entity}}/{{entity_id}}/related```
 
 Removing the relationship does not cause any of the records involved to be deleted from the system.
 
@@ -8,10 +8,10 @@ Removing the relationship does not cause any of the records involved to be delet
 
 Key | Value | Description | Type
 --- | --- | --- | ---
-X-PW-AccessToken | {{api_token}} | undefined | undefined
-X-PW-Application | developer_api | undefined | undefined
-X-PW-UserEmail | {{api_email}} | undefined | undefined
-Content-Type | application/json | undefined | undefined
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
 ### Body
 
 ```

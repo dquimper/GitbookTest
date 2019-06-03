@@ -1,6 +1,6 @@
 ## List People (Search)
 
-```POST {{base_url}}/people/search```
+```POST https://api.prosperworks.com/developer_api/v1/people/search```
 
 The /search endpoint provides the ability to list people and sort the results by certain parameters. When multiple ciriteria are provided records meeting ALL criteria will be returned (the filtering criteria have an 'AND' relationship).
 
@@ -44,10 +44,10 @@ Footnote:
 
 Key | Value | Description | Type
 --- | --- | --- | ---
-X-PW-AccessToken | {{api_token}} | undefined | undefined
-X-PW-Application | developer_api | undefined | undefined
-X-PW-UserEmail | {{api_email}} | undefined | undefined
-Content-Type | application/json | undefined | undefined
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
 ### Body
 
 ```
@@ -58,7 +58,7 @@ Content-Type | application/json | undefined | undefined
 ```
 ### Example Responses
 
-- Search People by Custom Multi-Select Dropdown
+- Search People by Last Interaction Date
 
 200: OK
 ```json
@@ -156,59 +156,59 @@ Content-Type | application/json | undefined | undefined
             }
         ],
         "date_created": 1516262400,
-        "date_modified": 1516312771,
-        "date_last_contacted": null,
-        "interaction_count": 0,
+        "date_modified": 1516313340,
+        "date_last_contacted": 1516313330,
+        "interaction_count": 2,
         "leads_converted_from": [],
         "date_lead_created": null
     }
 ]
 ```
-- Search People by Postal Code
+- Search People by Full Name
 
 200: OK
 ```json
 [
     {
-        "id": 7,
-        "name": "Taylor Lowe",
+        "id": 4,
+        "name": "Jack James",
         "prefix": null,
-        "first_name": "Taylor",
+        "first_name": "Jack",
         "middle_name": null,
-        "last_name": "Lowe",
+        "last_name": "James",
         "suffix": null,
         "address": {
             "street": "221 Main Street Suite 1350",
-            "city": "Vancouver",
-            "state": "BC",
-            "postal_code": "A1A1A1",
-            "country": "CA"
+            "city": "San Francisco",
+            "state": "CA",
+            "postal_code": "94105",
+            "country": ""
         },
         "assignee_id": null,
         "company_id": 2,
         "company_name": "ProsperWorks",
         "contact_type_id": 8,
-        "details": null,
+        "details": "This is an update",
         "emails": [
             {
-                "email": "taylor@prosperworks.com",
+                "email": "jackjames@prosperworks.com",
                 "category": "work"
             }
         ],
         "phone_numbers": [
             {
-                "number": "4158546956",
+                "number": "4153554776",
                 "category": "work"
             }
         ],
         "socials": [
             {
-                "url": "https://www.linkedin.com/in/taylorlowe11",
+                "url": "www.linkedin.com/pub/jack-james/54/172/b47",
                 "category": "linkedin"
             }
         ],
         "tags": [],
-        "title": "Business Development",
+        "title": "Customer Support",
         "websites": [
             {
                 "url": "www.prosperworks.com",
@@ -257,8 +257,8 @@ Content-Type | application/json | undefined | undefined
                 "value": null
             }
         ],
-        "date_created": 1516262400,
-        "date_modified": 1516311811,
+        "date_created": 1515434863,
+        "date_modified": 1516240218,
         "date_last_contacted": null,
         "interaction_count": 0,
         "leads_converted_from": [],
@@ -266,17 +266,109 @@ Content-Type | application/json | undefined | undefined
     }
 ]
 ```
-- Search People by Assignee Id
+- Search People by Custom Date Field
 
 200: OK
 ```json
-[{"id":4,"name":"Jack James","prefix":null,"first_name":"Jack","middle_name":null,"last_name":"James","suffix":null,"address":{"street":"221 Main Street Suite 1350","city":"San Francisco","state":"CA","postal_code":"94105","country":""},"assignee_id":2,"company_id":2,"company_name":"ProsperWorks","contact_type_id":8,"details":"This is an update","emails":[{"email":"jackjames@prosperworks.com","category":"work"}],"phone_numbers":[{"number":"4153554776","category":"work"}],"socials":[{"url":"www.linkedin.com/pub/jack-james/54/172/b47","category":"linkedin"}],"tags":[],"title":"Customer Support","websites":[{"url":"www.prosperworks.com","category":"work"}],"custom_fields":[{"custom_field_definition_id":8,"value":null},{"custom_field_definition_id":11,"value":null},{"custom_field_definition_id":9,"value":null},{"custom_field_definition_id":7,"value":false},{"custom_field_definition_id":3,"value":null},{"custom_field_definition_id":4,"value":null},{"custom_field_definition_id":12,"value":[]},{"custom_field_definition_id":10,"value":null},{"custom_field_definition_id":6,"value":null},{"custom_field_definition_id":5,"value":null}],"date_created":1515434863,"date_modified":1516299085,"date_last_contacted":null,"interaction_count":0,"leads_converted_from":[],"date_lead_created":null}]
-```
-- Search People by Custom Multi-Select Dropdown Set to Empty
-
-200: OK
-```json
-[{"id":4,"name":"Jack James","prefix":null,"first_name":"Jack","middle_name":null,"last_name":"James","suffix":null,"address":{"street":"221 Main Street Suite 1350","city":"San Francisco","state":"CA","postal_code":"94105","country":""},"assignee_id":2,"company_id":2,"company_name":"ProsperWorks","contact_type_id":5,"details":"This is an update","emails":[{"email":"jackjames@prosperworks.com","category":"work"}],"phone_numbers":[{"number":"4153554776","category":"work"}],"socials":[{"url":"www.linkedin.com/pub/jack-james/54/172/b47","category":"linkedin"}],"tags":[],"title":"Customer Support","websites":[{"url":"www.prosperworks.com","category":"work"}],"custom_fields":[{"custom_field_definition_id":8,"value":null},{"custom_field_definition_id":11,"value":null},{"custom_field_definition_id":9,"value":null},{"custom_field_definition_id":7,"value":false},{"custom_field_definition_id":3,"value":null},{"custom_field_definition_id":4,"value":null},{"custom_field_definition_id":12,"value":[]},{"custom_field_definition_id":10,"value":null},{"custom_field_definition_id":6,"value":null},{"custom_field_definition_id":5,"value":null}],"date_created":1515434863,"date_modified":1516308658,"date_last_contacted":null,"interaction_count":0,"leads_converted_from":[],"date_lead_created":null},{"id":6,"name":"Jo Bennett, (sample)","prefix":null,"first_name":"Jo","middle_name":null,"last_name":"Bennett","suffix":"(sample)","address":{"street":"543 Washington Ave","city":"Philadelphia","state":"PA","postal_code":"19135","country":""},"assignee_id":null,"company_id":4,"company_name":"Sabre Inc (sample)","contact_type_id":5,"details":null,"emails":[{"email":"jo@sabreinc.com","category":"work"}],"phone_numbers":[],"socials":[],"tags":[],"title":"CEO","websites":[],"custom_fields":[{"custom_field_definition_id":8,"value":null},{"custom_field_definition_id":11,"value":null},{"custom_field_definition_id":9,"value":null},{"custom_field_definition_id":7,"value":false},{"custom_field_definition_id":3,"value":null},{"custom_field_definition_id":4,"value":null},{"custom_field_definition_id":12,"value":[]},{"custom_field_definition_id":10,"value":null},{"custom_field_definition_id":6,"value":null},{"custom_field_definition_id":5,"value":null}],"date_created":1515434865,"date_modified":1515525462,"date_last_contacted":null,"interaction_count":0,"leads_converted_from":[],"date_lead_created":null},{"id":5,"name":"Michael Scott, (sample)","prefix":null,"first_name":"Michael","middle_name":null,"last_name":"Scott","suffix":"(sample)","address":{"street":"213 West Main Street","city":"Scranton","state":"PA","postal_code":"18501","country":""},"assignee_id":null,"company_id":3,"company_name":"Dunder Mifflin (sample)","contact_type_id":5,"details":null,"emails":[{"email":"michael@dundermifflin.com","category":"work"}],"phone_numbers":[{"number":"4152225466","category":"work"}],"socials":[],"tags":[],"title":"Regional Manager","websites":[{"url":"http://www.dundermifflin.com/index.shtml","category":"work"}],"custom_fields":[{"custom_field_definition_id":8,"value":null},{"custom_field_definition_id":11,"value":null},{"custom_field_definition_id":9,"value":null},{"custom_field_definition_id":7,"value":false},{"custom_field_definition_id":3,"value":null},{"custom_field_definition_id":4,"value":null},{"custom_field_definition_id":12,"value":[]},{"custom_field_definition_id":10,"value":null},{"custom_field_definition_id":6,"value":null},{"custom_field_definition_id":5,"value":null}],"date_created":1515434864,"date_modified":1516310945,"date_last_contacted":null,"interaction_count":0,"leads_converted_from":[],"date_lead_created":null}]
+[
+    {
+        "id": 7,
+        "name": "Taylor Lowe",
+        "prefix": null,
+        "first_name": "Taylor",
+        "middle_name": null,
+        "last_name": "Lowe",
+        "suffix": null,
+        "address": {
+            "street": "221 Main Street Suite 1350",
+            "city": "Vancouver",
+            "state": "BC",
+            "postal_code": "A1A1A1",
+            "country": "CA"
+        },
+        "assignee_id": null,
+        "company_id": 2,
+        "company_name": "ProsperWorks",
+        "contact_type_id": 8,
+        "details": null,
+        "emails": [
+            {
+                "email": "taylor@prosperworks.com",
+                "category": "work"
+            }
+        ],
+        "phone_numbers": [
+            {
+                "number": "4158546956",
+                "category": "work"
+            }
+        ],
+        "socials": [
+            {
+                "url": "https://www.linkedin.com/in/taylorlowe11",
+                "category": "linkedin"
+            }
+        ],
+        "tags": [
+            "tag1"
+        ],
+        "title": "Business Development",
+        "websites": [
+            {
+                "url": "www.prosperworks.com",
+                "category": "work"
+            }
+        ],
+        "custom_fields": [
+            {
+                "custom_field_definition_id": 6,
+                "value": 1515744000
+            },
+            {
+                "custom_field_definition_id": 8,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 11,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 9,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 7,
+                "value": false
+            },
+            {
+                "custom_field_definition_id": 3,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 4,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 12,
+                "value": []
+            },
+            {
+                "custom_field_definition_id": 10,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 5,
+                "value": null
+            }
+        ],
+        "date_created": 1516262400,
+        "date_modified": 1516312656,
+        "date_last_contacted": null,
+        "interaction_count": 0,
+        "leads_converted_from": [],
+        "date_lead_created": null
+    }
+]
 ```
 - List People in Groups of 200
 
@@ -746,120 +838,31 @@ Content-Type | application/json | undefined | undefined
     }
 ]
 ```
-- Search People by Phone Number
+- Search People by City
+
+200: OK
+```json
+[{"id":5,"name":"Michael Scott, (sample)","prefix":null,"first_name":"Michael","middle_name":null,"last_name":"Scott","suffix":"(sample)","address":{"street":"213 West Main Street","city":"Scranton","state":"PA","postal_code":"18501","country":""},"assignee_id":null,"company_id":3,"company_name":"Dunder Mifflin (sample)","contact_type_id":5,"details":null,"emails":[{"email":"michael@dundermifflin.com","category":"work"}],"phone_numbers":[{"number":"4152225466","category":"work"}],"socials":[],"tags":[],"title":"Regional Manager","websites":[{"url":"http://www.dundermifflin.com/index.shtml","category":"work"}],"custom_fields":[{"custom_field_definition_id":8,"value":null},{"custom_field_definition_id":11,"value":null},{"custom_field_definition_id":9,"value":null},{"custom_field_definition_id":7,"value":false},{"custom_field_definition_id":3,"value":null},{"custom_field_definition_id":4,"value":null},{"custom_field_definition_id":12,"value":[]},{"custom_field_definition_id":10,"value":null},{"custom_field_definition_id":6,"value":null},{"custom_field_definition_id":5,"value":null}],"date_created":1515434864,"date_modified":1516310945,"date_last_contacted":null,"interaction_count":0,"leads_converted_from":[],"date_lead_created":null}]
+```
+- Search People by Tags
 
 200: OK
 ```json
 [
     {
-        "id": 4,
-        "name": "Jack James",
+        "id": 7,
+        "name": "Taylor Lowe",
         "prefix": null,
-        "first_name": "Jack",
+        "first_name": "Taylor",
         "middle_name": null,
-        "last_name": "James",
+        "last_name": "Lowe",
         "suffix": null,
         "address": {
             "street": "221 Main Street Suite 1350",
-            "city": "San Francisco",
-            "state": "CA",
-            "postal_code": "94105",
-            "country": ""
-        },
-        "assignee_id": null,
-        "company_id": 2,
-        "company_name": "ProsperWorks",
-        "contact_type_id": 8,
-        "details": "This is an update",
-        "emails": [
-            {
-                "email": "jackjames@prosperworks.com",
-                "category": "work"
-            }
-        ],
-        "phone_numbers": [
-            {
-                "number": "4153554776",
-                "category": "work"
-            }
-        ],
-        "socials": [
-            {
-                "url": "www.linkedin.com/pub/jack-james/54/172/b47",
-                "category": "linkedin"
-            }
-        ],
-        "tags": [],
-        "title": "Customer Support",
-        "websites": [
-            {
-                "url": "www.prosperworks.com",
-                "category": "work"
-            }
-        ],
-        "custom_fields": [
-            {
-                "custom_field_definition_id": 8,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 11,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 9,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 7,
-                "value": false
-            },
-            {
-                "custom_field_definition_id": 3,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 4,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 12,
-                "value": []
-            },
-            {
-                "custom_field_definition_id": 10,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 6,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 5,
-                "value": null
-            }
-        ],
-        "date_created": 1515434863,
-        "date_modified": 1516240218,
-        "date_last_contacted": null,
-        "interaction_count": 0,
-        "leads_converted_from": [],
-        "date_lead_created": null
-    },
-    {
-        "id": 3,
-        "name": "Jon Lee",
-        "prefix": null,
-        "first_name": "Jon",
-        "middle_name": null,
-        "last_name": "Lee",
-        "suffix": null,
-        "address": {
-            "street": "221 Main Street Suite 1350",
-            "city": "San Francisco",
-            "state": "CA",
-            "postal_code": "94105",
-            "country": ""
+            "city": "Vancouver",
+            "state": "BC",
+            "postal_code": "A1A1A1",
+            "country": "CA"
         },
         "assignee_id": null,
         "company_id": 2,
@@ -868,24 +871,26 @@ Content-Type | application/json | undefined | undefined
         "details": null,
         "emails": [
             {
-                "email": "jonlee@prosperworks.com",
+                "email": "taylor@prosperworks.com",
                 "category": "work"
             }
         ],
         "phone_numbers": [
             {
-                "number": "4153554776",
+                "number": "4158546956",
                 "category": "work"
             }
         ],
         "socials": [
             {
-                "url": "https://www.linkedin.com/in/jonlee168",
+                "url": "https://www.linkedin.com/in/taylorlowe11",
                 "category": "linkedin"
             }
         ],
-        "tags": [],
-        "title": "CEO",
+        "tags": [
+            "tag1"
+        ],
+        "title": "Business Development",
         "websites": [
             {
                 "url": "www.prosperworks.com",
@@ -934,8 +939,8 @@ Content-Type | application/json | undefined | undefined
                 "value": null
             }
         ],
-        "date_created": 1515434862,
-        "date_modified": 1515434877,
+        "date_created": 1516262400,
+        "date_modified": 1516312015,
         "date_last_contacted": null,
         "interaction_count": 0,
         "leads_converted_from": [],
@@ -943,7 +948,7 @@ Content-Type | application/json | undefined | undefined
     }
 ]
 ```
-- Search People by Interaction Count
+- Search People by Custom Multi-Select Dropdown
 
 200: OK
 ```json
@@ -1041,241 +1046,9 @@ Content-Type | application/json | undefined | undefined
             }
         ],
         "date_created": 1516262400,
-        "date_modified": 1516313340,
-        "date_last_contacted": 1516313330,
-        "interaction_count": 2,
-        "leads_converted_from": [],
-        "date_lead_created": null
-    }
-]
-```
-- People Search
-
-200: OK
-```json
-[{"id":27140338,"name":"My Contact","prefix":null,"first_name":"My","middle_name":null,"last_name":"Contact","suffix":null,"address":null,"assignee_id":null,"company_id":null,"company_name":null,"contact_type_id":451492,"details":null,"emails":[],"phone_numbers":[],"socials":[],"tags":[],"title":null,"websites":[],"custom_fields":[{"custom_field_definition_id":100764,"value":"Text fields are 255 chars or less!"},{"custom_field_definition_id":103481,"value":"Text area fields can have long text content"}],"date_created":1490044880,"date_modified":1490044880,"interaction_count":0},{"id":27140359,"name":"My Contact","prefix":null,"first_name":"My","middle_name":null,"last_name":"Contact","suffix":null,"address":null,"assignee_id":null,"company_id":13349319,"company_name":"Noemail","contact_type_id":451492,"details":null,"emails":[{"email":"mylead@noemail.com","category":"work"}],"phone_numbers":[],"socials":[],"tags":[],"title":null,"websites":[],"custom_fields":[{"custom_field_definition_id":100764,"value":"Text fields are 255 chars or less!"},{"custom_field_definition_id":103481,"value":"Text area fields can have long text content"}],"date_created":1490045010,"date_modified":1496694271,"interaction_count":0},{"id":27140372,"name":"My Contact","prefix":null,"first_name":"My","middle_name":null,"last_name":"Contact","suffix":null,"address":null,"assignee_id":null,"company_id":null,"company_name":null,"contact_type_id":451492,"details":null,"emails":[{"email":"mylead_1234@noemail.com","category":"work"}],"phone_numbers":[{"number":"415-123-45678","category":"mobile"}],"socials":[],"tags":[],"title":null,"websites":[],"custom_fields":[{"custom_field_definition_id":100764,"value":"Text fields are 255 chars or less!"},{"custom_field_definition_id":103481,"value":"Text area fields can have long text content"}],"date_created":1490045046,"date_modified":1490045046,"interaction_count":0},{"id":27140432,"name":"My Contact","prefix":null,"first_name":"My","middle_name":null,"last_name":"Contact","suffix":null,"address":null,"assignee_id":null,"company_id":null,"company_name":null,"contact_type_id":451492,"details":null,"emails":[{"email":"mycontact_1234@noemail.com","category":"work"}],"phone_numbers":[{"number":"415-123-45678","category":"mobile"}],"socials":[],"tags":[],"title":null,"websites":[],"custom_fields":[{"custom_field_definition_id":100764,"value":null},{"custom_field_definition_id":103481,"value":null}],"date_created":1490045377,"date_modified":1490045377,"interaction_count":0},{"id":27140442,"name":"My Contact","prefix":null,"first_name":"My","middle_name":null,"last_name":"Contact","suffix":null,"address":null,"assignee_id":null,"company_id":null,"company_name":null,"contact_type_id":451492,"details":null,"emails":[{"email":"mycontact_123@noemail.com","category":"work"}],"phone_numbers":[{"number":"415-123-45678","category":"mobile"}],"socials":[],"tags":[],"title":null,"websites":[],"custom_fields":[{"custom_field_definition_id":100764,"value":null},{"custom_field_definition_id":103481,"value":null}],"date_created":1490045413,"date_modified":1490045413,"interaction_count":0},{"id":27140448,"name":"My Contact","prefix":null,"first_name":"My","middle_name":null,"last_name":"Contact","suffix":null,"address":null,"assignee_id":null,"company_id":null,"company_name":null,"contact_type_id":451492,"details":null,"emails":[{"email":"mycontact_1233@noemail.com","category":"work"}],"phone_numbers":[{"number":"415-123-45678","category":"mobile"}],"socials":[],"tags":[],"title":null,"websites":[],"custom_fields":[{"custom_field_definition_id":100764,"value":null},{"custom_field_definition_id":103481,"value":null}],"date_created":1490045450,"date_modified":1490045450,"interaction_count":0},{"id":26443553,"name":"Person Default","prefix":null,"first_name":"Person","middle_name":null,"last_name":"Default","suffix":null,"address":{"street":"","city":"","state":"","postal_code":"","country":""},"assignee_id":137658,"company_id":null,"company_name":null,"contact_type_id":451490,"details":null,"emails":[],"phone_numbers":[],"socials":[],"tags":[],"title":null,"websites":[],"custom_fields":[{"custom_field_definition_id":100764,"value":null},{"custom_field_definition_id":103481,"value":null}],"date_created":1489018908,"date_modified":1490115067,"interaction_count":0}]
-```
-- Search People by State
-
-200: OK
-```json
-[{"id":6,"name":"Jo Bennett, (sample)","prefix":null,"first_name":"Jo","middle_name":null,"last_name":"Bennett","suffix":"(sample)","address":{"street":"543 Washington Ave","city":"Philadelphia","state":"PA","postal_code":"19135","country":""},"assignee_id":null,"company_id":4,"company_name":"Sabre Inc (sample)","contact_type_id":5,"details":null,"emails":[{"email":"jo@sabreinc.com","category":"work"}],"phone_numbers":[],"socials":[],"tags":[],"title":"CEO","websites":[],"custom_fields":[{"custom_field_definition_id":8,"value":null},{"custom_field_definition_id":11,"value":null},{"custom_field_definition_id":9,"value":null},{"custom_field_definition_id":7,"value":false},{"custom_field_definition_id":3,"value":null},{"custom_field_definition_id":4,"value":null},{"custom_field_definition_id":12,"value":[]},{"custom_field_definition_id":10,"value":null},{"custom_field_definition_id":6,"value":null},{"custom_field_definition_id":5,"value":null}],"date_created":1515434865,"date_modified":1515525462,"date_last_contacted":null,"interaction_count":0,"leads_converted_from":[],"date_lead_created":null},{"id":5,"name":"Michael Scott, (sample)","prefix":null,"first_name":"Michael","middle_name":null,"last_name":"Scott","suffix":"(sample)","address":{"street":"213 West Main Street","city":"Scranton","state":"PA","postal_code":"18501","country":""},"assignee_id":null,"company_id":3,"company_name":"Dunder Mifflin (sample)","contact_type_id":5,"details":null,"emails":[{"email":"michael@dundermifflin.com","category":"work"}],"phone_numbers":[{"number":"4152225466","category":"work"}],"socials":[],"tags":[],"title":"Regional Manager","websites":[{"url":"http://www.dundermifflin.com/index.shtml","category":"work"}],"custom_fields":[{"custom_field_definition_id":8,"value":null},{"custom_field_definition_id":11,"value":null},{"custom_field_definition_id":9,"value":null},{"custom_field_definition_id":7,"value":false},{"custom_field_definition_id":3,"value":null},{"custom_field_definition_id":4,"value":null},{"custom_field_definition_id":12,"value":[]},{"custom_field_definition_id":10,"value":null},{"custom_field_definition_id":6,"value":null},{"custom_field_definition_id":5,"value":null}],"date_created":1515434864,"date_modified":1516310945,"date_last_contacted":null,"interaction_count":0,"leads_converted_from":[],"date_lead_created":null}]
-```
-- Search People by Full Name
-
-200: OK
-```json
-[
-    {
-        "id": 4,
-        "name": "Jack James",
-        "prefix": null,
-        "first_name": "Jack",
-        "middle_name": null,
-        "last_name": "James",
-        "suffix": null,
-        "address": {
-            "street": "221 Main Street Suite 1350",
-            "city": "San Francisco",
-            "state": "CA",
-            "postal_code": "94105",
-            "country": ""
-        },
-        "assignee_id": null,
-        "company_id": 2,
-        "company_name": "ProsperWorks",
-        "contact_type_id": 8,
-        "details": "This is an update",
-        "emails": [
-            {
-                "email": "jackjames@prosperworks.com",
-                "category": "work"
-            }
-        ],
-        "phone_numbers": [
-            {
-                "number": "4153554776",
-                "category": "work"
-            }
-        ],
-        "socials": [
-            {
-                "url": "www.linkedin.com/pub/jack-james/54/172/b47",
-                "category": "linkedin"
-            }
-        ],
-        "tags": [],
-        "title": "Customer Support",
-        "websites": [
-            {
-                "url": "www.prosperworks.com",
-                "category": "work"
-            }
-        ],
-        "custom_fields": [
-            {
-                "custom_field_definition_id": 8,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 11,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 9,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 7,
-                "value": false
-            },
-            {
-                "custom_field_definition_id": 3,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 4,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 12,
-                "value": []
-            },
-            {
-                "custom_field_definition_id": 10,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 6,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 5,
-                "value": null
-            }
-        ],
-        "date_created": 1515434863,
-        "date_modified": 1516240218,
+        "date_modified": 1516312771,
         "date_last_contacted": null,
         "interaction_count": 0,
-        "leads_converted_from": [],
-        "date_lead_created": null
-    }
-]
-```
-- Search People by Followed
-
-200: OK
-```json
-[{"id":4,"name":"Jack James","prefix":null,"first_name":"Jack","middle_name":null,"last_name":"James","suffix":null,"address":{"street":"221 Main Street Suite 1350","city":"San Francisco","state":"CA","postal_code":"94105","country":""},"assignee_id":2,"company_id":2,"company_name":"ProsperWorks","contact_type_id":5,"details":"This is an update","emails":[{"email":"jackjames@prosperworks.com","category":"work"}],"phone_numbers":[{"number":"4153554776","category":"work"}],"socials":[{"url":"www.linkedin.com/pub/jack-james/54/172/b47","category":"linkedin"}],"tags":[],"title":"Customer Support","websites":[{"url":"www.prosperworks.com","category":"work"}],"custom_fields":[{"custom_field_definition_id":8,"value":null},{"custom_field_definition_id":11,"value":null},{"custom_field_definition_id":9,"value":null},{"custom_field_definition_id":7,"value":false},{"custom_field_definition_id":3,"value":null},{"custom_field_definition_id":4,"value":null},{"custom_field_definition_id":12,"value":[]},{"custom_field_definition_id":10,"value":null},{"custom_field_definition_id":6,"value":null},{"custom_field_definition_id":5,"value":null}],"date_created":1515434863,"date_modified":1516308658,"date_last_contacted":null,"interaction_count":0,"leads_converted_from":[],"date_lead_created":null}]
-```
-- Search People by Date Added
-
-200: OK
-```json
-[{"id":7,"name":"Taylor Lowe","prefix":null,"first_name":"Taylor","middle_name":null,"last_name":"Lowe","suffix":null,"address":{"street":"221 Main Street Suite 1350","city":"San Francisco","state":"CA","postal_code":"94105","country":""},"assignee_id":null,"company_id":2,"company_name":"ProsperWorks","contact_type_id":8,"details":null,"emails":[{"email":"taylor@prosperworks.com","category":"work"}],"phone_numbers":[{"number":"4158546956","category":"work"}],"socials":[{"url":"https://www.linkedin.com/in/taylorlowe11","category":"linkedin"}],"tags":[],"title":"Business Development","websites":[{"url":"www.prosperworks.com","category":"work"}],"custom_fields":[{"custom_field_definition_id":8,"value":null},{"custom_field_definition_id":11,"value":null},{"custom_field_definition_id":9,"value":null},{"custom_field_definition_id":7,"value":false},{"custom_field_definition_id":3,"value":null},{"custom_field_definition_id":4,"value":null},{"custom_field_definition_id":12,"value":[]},{"custom_field_definition_id":10,"value":null},{"custom_field_definition_id":6,"value":null},{"custom_field_definition_id":5,"value":null}],"date_created":1516262400,"date_modified":1516299712,"date_last_contacted":null,"interaction_count":0,"leads_converted_from":[],"date_lead_created":null}]
-```
-- Search People by Last Interaction Date
-
-200: OK
-```json
-[
-    {
-        "id": 7,
-        "name": "Taylor Lowe",
-        "prefix": null,
-        "first_name": "Taylor",
-        "middle_name": null,
-        "last_name": "Lowe",
-        "suffix": null,
-        "address": {
-            "street": "221 Main Street Suite 1350",
-            "city": "Vancouver",
-            "state": "BC",
-            "postal_code": "A1A1A1",
-            "country": "CA"
-        },
-        "assignee_id": null,
-        "company_id": 2,
-        "company_name": "ProsperWorks",
-        "contact_type_id": 8,
-        "details": null,
-        "emails": [
-            {
-                "email": "taylor@prosperworks.com",
-                "category": "work"
-            }
-        ],
-        "phone_numbers": [
-            {
-                "number": "4158546956",
-                "category": "work"
-            }
-        ],
-        "socials": [
-            {
-                "url": "https://www.linkedin.com/in/taylorlowe11",
-                "category": "linkedin"
-            }
-        ],
-        "tags": [
-            "tag1"
-        ],
-        "title": "Business Development",
-        "websites": [
-            {
-                "url": "www.prosperworks.com",
-                "category": "work"
-            }
-        ],
-        "custom_fields": [
-            {
-                "custom_field_definition_id": 6,
-                "value": 1515744000
-            },
-            {
-                "custom_field_definition_id": 12,
-                "value": [
-                    8
-                ]
-            },
-            {
-                "custom_field_definition_id": 8,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 11,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 9,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 7,
-                "value": false
-            },
-            {
-                "custom_field_definition_id": 3,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 4,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 10,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 5,
-                "value": null
-            }
-        ],
-        "date_created": 1516262400,
-        "date_modified": 1516313340,
-        "date_last_contacted": 1516313330,
-        "interaction_count": 2,
         "leads_converted_from": [],
         "date_lead_created": null
     }
@@ -1573,109 +1346,11 @@ Content-Type | application/json | undefined | undefined
     }
 ]
 ```
-- Search People by Custom Date Field
+- Search People by Custom Multi-Select Dropdown Set to Empty
 
 200: OK
 ```json
-[
-    {
-        "id": 7,
-        "name": "Taylor Lowe",
-        "prefix": null,
-        "first_name": "Taylor",
-        "middle_name": null,
-        "last_name": "Lowe",
-        "suffix": null,
-        "address": {
-            "street": "221 Main Street Suite 1350",
-            "city": "Vancouver",
-            "state": "BC",
-            "postal_code": "A1A1A1",
-            "country": "CA"
-        },
-        "assignee_id": null,
-        "company_id": 2,
-        "company_name": "ProsperWorks",
-        "contact_type_id": 8,
-        "details": null,
-        "emails": [
-            {
-                "email": "taylor@prosperworks.com",
-                "category": "work"
-            }
-        ],
-        "phone_numbers": [
-            {
-                "number": "4158546956",
-                "category": "work"
-            }
-        ],
-        "socials": [
-            {
-                "url": "https://www.linkedin.com/in/taylorlowe11",
-                "category": "linkedin"
-            }
-        ],
-        "tags": [
-            "tag1"
-        ],
-        "title": "Business Development",
-        "websites": [
-            {
-                "url": "www.prosperworks.com",
-                "category": "work"
-            }
-        ],
-        "custom_fields": [
-            {
-                "custom_field_definition_id": 6,
-                "value": 1515744000
-            },
-            {
-                "custom_field_definition_id": 8,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 11,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 9,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 7,
-                "value": false
-            },
-            {
-                "custom_field_definition_id": 3,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 4,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 12,
-                "value": []
-            },
-            {
-                "custom_field_definition_id": 10,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 5,
-                "value": null
-            }
-        ],
-        "date_created": 1516262400,
-        "date_modified": 1516312656,
-        "date_last_contacted": null,
-        "interaction_count": 0,
-        "leads_converted_from": [],
-        "date_lead_created": null
-    }
-]
+[{"id":4,"name":"Jack James","prefix":null,"first_name":"Jack","middle_name":null,"last_name":"James","suffix":null,"address":{"street":"221 Main Street Suite 1350","city":"San Francisco","state":"CA","postal_code":"94105","country":""},"assignee_id":2,"company_id":2,"company_name":"ProsperWorks","contact_type_id":5,"details":"This is an update","emails":[{"email":"jackjames@prosperworks.com","category":"work"}],"phone_numbers":[{"number":"4153554776","category":"work"}],"socials":[{"url":"www.linkedin.com/pub/jack-james/54/172/b47","category":"linkedin"}],"tags":[],"title":"Customer Support","websites":[{"url":"www.prosperworks.com","category":"work"}],"custom_fields":[{"custom_field_definition_id":8,"value":null},{"custom_field_definition_id":11,"value":null},{"custom_field_definition_id":9,"value":null},{"custom_field_definition_id":7,"value":false},{"custom_field_definition_id":3,"value":null},{"custom_field_definition_id":4,"value":null},{"custom_field_definition_id":12,"value":[]},{"custom_field_definition_id":10,"value":null},{"custom_field_definition_id":6,"value":null},{"custom_field_definition_id":5,"value":null}],"date_created":1515434863,"date_modified":1516308658,"date_last_contacted":null,"interaction_count":0,"leads_converted_from":[],"date_lead_created":null},{"id":6,"name":"Jo Bennett, (sample)","prefix":null,"first_name":"Jo","middle_name":null,"last_name":"Bennett","suffix":"(sample)","address":{"street":"543 Washington Ave","city":"Philadelphia","state":"PA","postal_code":"19135","country":""},"assignee_id":null,"company_id":4,"company_name":"Sabre Inc (sample)","contact_type_id":5,"details":null,"emails":[{"email":"jo@sabreinc.com","category":"work"}],"phone_numbers":[],"socials":[],"tags":[],"title":"CEO","websites":[],"custom_fields":[{"custom_field_definition_id":8,"value":null},{"custom_field_definition_id":11,"value":null},{"custom_field_definition_id":9,"value":null},{"custom_field_definition_id":7,"value":false},{"custom_field_definition_id":3,"value":null},{"custom_field_definition_id":4,"value":null},{"custom_field_definition_id":12,"value":[]},{"custom_field_definition_id":10,"value":null},{"custom_field_definition_id":6,"value":null},{"custom_field_definition_id":5,"value":null}],"date_created":1515434865,"date_modified":1515525462,"date_last_contacted":null,"interaction_count":0,"leads_converted_from":[],"date_lead_created":null},{"id":5,"name":"Michael Scott, (sample)","prefix":null,"first_name":"Michael","middle_name":null,"last_name":"Scott","suffix":"(sample)","address":{"street":"213 West Main Street","city":"Scranton","state":"PA","postal_code":"18501","country":""},"assignee_id":null,"company_id":3,"company_name":"Dunder Mifflin (sample)","contact_type_id":5,"details":null,"emails":[{"email":"michael@dundermifflin.com","category":"work"}],"phone_numbers":[{"number":"4152225466","category":"work"}],"socials":[],"tags":[],"title":"Regional Manager","websites":[{"url":"http://www.dundermifflin.com/index.shtml","category":"work"}],"custom_fields":[{"custom_field_definition_id":8,"value":null},{"custom_field_definition_id":11,"value":null},{"custom_field_definition_id":9,"value":null},{"custom_field_definition_id":7,"value":false},{"custom_field_definition_id":3,"value":null},{"custom_field_definition_id":4,"value":null},{"custom_field_definition_id":12,"value":[]},{"custom_field_definition_id":10,"value":null},{"custom_field_definition_id":6,"value":null},{"custom_field_definition_id":5,"value":null}],"date_created":1515434864,"date_modified":1516310945,"date_last_contacted":null,"interaction_count":0,"leads_converted_from":[],"date_lead_created":null}]
 ```
 - Search People by Opportunity Ids
 
@@ -1785,19 +1460,13 @@ Content-Type | application/json | undefined | undefined
     }
 ]
 ```
-- Search People by City
+- Search People by Assignee Id
 
 200: OK
 ```json
-[{"id":5,"name":"Michael Scott, (sample)","prefix":null,"first_name":"Michael","middle_name":null,"last_name":"Scott","suffix":"(sample)","address":{"street":"213 West Main Street","city":"Scranton","state":"PA","postal_code":"18501","country":""},"assignee_id":null,"company_id":3,"company_name":"Dunder Mifflin (sample)","contact_type_id":5,"details":null,"emails":[{"email":"michael@dundermifflin.com","category":"work"}],"phone_numbers":[{"number":"4152225466","category":"work"}],"socials":[],"tags":[],"title":"Regional Manager","websites":[{"url":"http://www.dundermifflin.com/index.shtml","category":"work"}],"custom_fields":[{"custom_field_definition_id":8,"value":null},{"custom_field_definition_id":11,"value":null},{"custom_field_definition_id":9,"value":null},{"custom_field_definition_id":7,"value":false},{"custom_field_definition_id":3,"value":null},{"custom_field_definition_id":4,"value":null},{"custom_field_definition_id":12,"value":[]},{"custom_field_definition_id":10,"value":null},{"custom_field_definition_id":6,"value":null},{"custom_field_definition_id":5,"value":null}],"date_created":1515434864,"date_modified":1516310945,"date_last_contacted":null,"interaction_count":0,"leads_converted_from":[],"date_lead_created":null}]
+[{"id":4,"name":"Jack James","prefix":null,"first_name":"Jack","middle_name":null,"last_name":"James","suffix":null,"address":{"street":"221 Main Street Suite 1350","city":"San Francisco","state":"CA","postal_code":"94105","country":""},"assignee_id":2,"company_id":2,"company_name":"ProsperWorks","contact_type_id":8,"details":"This is an update","emails":[{"email":"jackjames@prosperworks.com","category":"work"}],"phone_numbers":[{"number":"4153554776","category":"work"}],"socials":[{"url":"www.linkedin.com/pub/jack-james/54/172/b47","category":"linkedin"}],"tags":[],"title":"Customer Support","websites":[{"url":"www.prosperworks.com","category":"work"}],"custom_fields":[{"custom_field_definition_id":8,"value":null},{"custom_field_definition_id":11,"value":null},{"custom_field_definition_id":9,"value":null},{"custom_field_definition_id":7,"value":false},{"custom_field_definition_id":3,"value":null},{"custom_field_definition_id":4,"value":null},{"custom_field_definition_id":12,"value":[]},{"custom_field_definition_id":10,"value":null},{"custom_field_definition_id":6,"value":null},{"custom_field_definition_id":5,"value":null}],"date_created":1515434863,"date_modified":1516299085,"date_last_contacted":null,"interaction_count":0,"leads_converted_from":[],"date_lead_created":null}]
 ```
-- Search People by Contact Type
-
-200: OK
-```json
-[{"id":6,"name":"Jo Bennett, (sample)","prefix":null,"first_name":"Jo","middle_name":null,"last_name":"Bennett","suffix":"(sample)","address":{"street":"543 Washington Ave","city":"Philadelphia","state":"PA","postal_code":"19135","country":""},"assignee_id":null,"company_id":4,"company_name":"Sabre Inc (sample)","contact_type_id":5,"details":null,"emails":[{"email":"jo@sabreinc.com","category":"work"}],"phone_numbers":[],"socials":[],"tags":[],"title":"CEO","websites":[],"custom_fields":[{"custom_field_definition_id":8,"value":null},{"custom_field_definition_id":11,"value":null},{"custom_field_definition_id":9,"value":null},{"custom_field_definition_id":7,"value":false},{"custom_field_definition_id":3,"value":null},{"custom_field_definition_id":4,"value":null},{"custom_field_definition_id":12,"value":[]},{"custom_field_definition_id":10,"value":null},{"custom_field_definition_id":6,"value":null},{"custom_field_definition_id":5,"value":null}],"date_created":1515434865,"date_modified":1515525462,"date_last_contacted":null,"interaction_count":0,"leads_converted_from":[],"date_lead_created":null},{"id":5,"name":"Michael Scott, (sample)","prefix":null,"first_name":"Michael","middle_name":null,"last_name":"Scott","suffix":"(sample)","address":{"street":"213 West Main Street","city":"Scranton","state":"PA","postal_code":"18501","country":""},"assignee_id":null,"company_id":3,"company_name":"Dunder Mifflin (sample)","contact_type_id":5,"details":null,"emails":[{"email":"michael@dundermifflin.com","category":"work"}],"phone_numbers":[{"number":"4152225466","category":"work"}],"socials":[],"tags":[],"title":"Regional Manager","websites":[{"url":"http://www.dundermifflin.com/index.shtml","category":"work"}],"custom_fields":[{"custom_field_definition_id":8,"value":null},{"custom_field_definition_id":11,"value":null},{"custom_field_definition_id":9,"value":null},{"custom_field_definition_id":7,"value":false},{"custom_field_definition_id":3,"value":null},{"custom_field_definition_id":4,"value":null},{"custom_field_definition_id":12,"value":[]},{"custom_field_definition_id":10,"value":null},{"custom_field_definition_id":6,"value":null},{"custom_field_definition_id":5,"value":null}],"date_created":1515434864,"date_modified":1515434877,"date_last_contacted":null,"interaction_count":0,"leads_converted_from":[],"date_lead_created":null}]
-```
-- Search People by Tags
+- Search People by Interaction Count
 
 200: OK
 ```json
@@ -1852,6 +1521,337 @@ Content-Type | application/json | undefined | undefined
         ],
         "custom_fields": [
             {
+                "custom_field_definition_id": 6,
+                "value": 1515744000
+            },
+            {
+                "custom_field_definition_id": 12,
+                "value": [
+                    8
+                ]
+            },
+            {
+                "custom_field_definition_id": 8,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 11,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 9,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 7,
+                "value": false
+            },
+            {
+                "custom_field_definition_id": 3,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 4,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 10,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 5,
+                "value": null
+            }
+        ],
+        "date_created": 1516262400,
+        "date_modified": 1516313340,
+        "date_last_contacted": 1516313330,
+        "interaction_count": 2,
+        "leads_converted_from": [],
+        "date_lead_created": null
+    }
+]
+```
+- Search People by Followed
+
+200: OK
+```json
+[{"id":4,"name":"Jack James","prefix":null,"first_name":"Jack","middle_name":null,"last_name":"James","suffix":null,"address":{"street":"221 Main Street Suite 1350","city":"San Francisco","state":"CA","postal_code":"94105","country":""},"assignee_id":2,"company_id":2,"company_name":"ProsperWorks","contact_type_id":5,"details":"This is an update","emails":[{"email":"jackjames@prosperworks.com","category":"work"}],"phone_numbers":[{"number":"4153554776","category":"work"}],"socials":[{"url":"www.linkedin.com/pub/jack-james/54/172/b47","category":"linkedin"}],"tags":[],"title":"Customer Support","websites":[{"url":"www.prosperworks.com","category":"work"}],"custom_fields":[{"custom_field_definition_id":8,"value":null},{"custom_field_definition_id":11,"value":null},{"custom_field_definition_id":9,"value":null},{"custom_field_definition_id":7,"value":false},{"custom_field_definition_id":3,"value":null},{"custom_field_definition_id":4,"value":null},{"custom_field_definition_id":12,"value":[]},{"custom_field_definition_id":10,"value":null},{"custom_field_definition_id":6,"value":null},{"custom_field_definition_id":5,"value":null}],"date_created":1515434863,"date_modified":1516308658,"date_last_contacted":null,"interaction_count":0,"leads_converted_from":[],"date_lead_created":null}]
+```
+- People Search
+
+200: OK
+```json
+[{"id":27140338,"name":"My Contact","prefix":null,"first_name":"My","middle_name":null,"last_name":"Contact","suffix":null,"address":null,"assignee_id":null,"company_id":null,"company_name":null,"contact_type_id":451492,"details":null,"emails":[],"phone_numbers":[],"socials":[],"tags":[],"title":null,"websites":[],"custom_fields":[{"custom_field_definition_id":100764,"value":"Text fields are 255 chars or less!"},{"custom_field_definition_id":103481,"value":"Text area fields can have long text content"}],"date_created":1490044880,"date_modified":1490044880,"interaction_count":0},{"id":27140359,"name":"My Contact","prefix":null,"first_name":"My","middle_name":null,"last_name":"Contact","suffix":null,"address":null,"assignee_id":null,"company_id":13349319,"company_name":"Noemail","contact_type_id":451492,"details":null,"emails":[{"email":"mylead@noemail.com","category":"work"}],"phone_numbers":[],"socials":[],"tags":[],"title":null,"websites":[],"custom_fields":[{"custom_field_definition_id":100764,"value":"Text fields are 255 chars or less!"},{"custom_field_definition_id":103481,"value":"Text area fields can have long text content"}],"date_created":1490045010,"date_modified":1496694271,"interaction_count":0},{"id":27140372,"name":"My Contact","prefix":null,"first_name":"My","middle_name":null,"last_name":"Contact","suffix":null,"address":null,"assignee_id":null,"company_id":null,"company_name":null,"contact_type_id":451492,"details":null,"emails":[{"email":"mylead_1234@noemail.com","category":"work"}],"phone_numbers":[{"number":"415-123-45678","category":"mobile"}],"socials":[],"tags":[],"title":null,"websites":[],"custom_fields":[{"custom_field_definition_id":100764,"value":"Text fields are 255 chars or less!"},{"custom_field_definition_id":103481,"value":"Text area fields can have long text content"}],"date_created":1490045046,"date_modified":1490045046,"interaction_count":0},{"id":27140432,"name":"My Contact","prefix":null,"first_name":"My","middle_name":null,"last_name":"Contact","suffix":null,"address":null,"assignee_id":null,"company_id":null,"company_name":null,"contact_type_id":451492,"details":null,"emails":[{"email":"mycontact_1234@noemail.com","category":"work"}],"phone_numbers":[{"number":"415-123-45678","category":"mobile"}],"socials":[],"tags":[],"title":null,"websites":[],"custom_fields":[{"custom_field_definition_id":100764,"value":null},{"custom_field_definition_id":103481,"value":null}],"date_created":1490045377,"date_modified":1490045377,"interaction_count":0},{"id":27140442,"name":"My Contact","prefix":null,"first_name":"My","middle_name":null,"last_name":"Contact","suffix":null,"address":null,"assignee_id":null,"company_id":null,"company_name":null,"contact_type_id":451492,"details":null,"emails":[{"email":"mycontact_123@noemail.com","category":"work"}],"phone_numbers":[{"number":"415-123-45678","category":"mobile"}],"socials":[],"tags":[],"title":null,"websites":[],"custom_fields":[{"custom_field_definition_id":100764,"value":null},{"custom_field_definition_id":103481,"value":null}],"date_created":1490045413,"date_modified":1490045413,"interaction_count":0},{"id":27140448,"name":"My Contact","prefix":null,"first_name":"My","middle_name":null,"last_name":"Contact","suffix":null,"address":null,"assignee_id":null,"company_id":null,"company_name":null,"contact_type_id":451492,"details":null,"emails":[{"email":"mycontact_1233@noemail.com","category":"work"}],"phone_numbers":[{"number":"415-123-45678","category":"mobile"}],"socials":[],"tags":[],"title":null,"websites":[],"custom_fields":[{"custom_field_definition_id":100764,"value":null},{"custom_field_definition_id":103481,"value":null}],"date_created":1490045450,"date_modified":1490045450,"interaction_count":0},{"id":26443553,"name":"Person Default","prefix":null,"first_name":"Person","middle_name":null,"last_name":"Default","suffix":null,"address":{"street":"","city":"","state":"","postal_code":"","country":""},"assignee_id":137658,"company_id":null,"company_name":null,"contact_type_id":451490,"details":null,"emails":[],"phone_numbers":[],"socials":[],"tags":[],"title":null,"websites":[],"custom_fields":[{"custom_field_definition_id":100764,"value":null},{"custom_field_definition_id":103481,"value":null}],"date_created":1489018908,"date_modified":1490115067,"interaction_count":0}]
+```
+- Search People by Contact Type
+
+200: OK
+```json
+[{"id":6,"name":"Jo Bennett, (sample)","prefix":null,"first_name":"Jo","middle_name":null,"last_name":"Bennett","suffix":"(sample)","address":{"street":"543 Washington Ave","city":"Philadelphia","state":"PA","postal_code":"19135","country":""},"assignee_id":null,"company_id":4,"company_name":"Sabre Inc (sample)","contact_type_id":5,"details":null,"emails":[{"email":"jo@sabreinc.com","category":"work"}],"phone_numbers":[],"socials":[],"tags":[],"title":"CEO","websites":[],"custom_fields":[{"custom_field_definition_id":8,"value":null},{"custom_field_definition_id":11,"value":null},{"custom_field_definition_id":9,"value":null},{"custom_field_definition_id":7,"value":false},{"custom_field_definition_id":3,"value":null},{"custom_field_definition_id":4,"value":null},{"custom_field_definition_id":12,"value":[]},{"custom_field_definition_id":10,"value":null},{"custom_field_definition_id":6,"value":null},{"custom_field_definition_id":5,"value":null}],"date_created":1515434865,"date_modified":1515525462,"date_last_contacted":null,"interaction_count":0,"leads_converted_from":[],"date_lead_created":null},{"id":5,"name":"Michael Scott, (sample)","prefix":null,"first_name":"Michael","middle_name":null,"last_name":"Scott","suffix":"(sample)","address":{"street":"213 West Main Street","city":"Scranton","state":"PA","postal_code":"18501","country":""},"assignee_id":null,"company_id":3,"company_name":"Dunder Mifflin (sample)","contact_type_id":5,"details":null,"emails":[{"email":"michael@dundermifflin.com","category":"work"}],"phone_numbers":[{"number":"4152225466","category":"work"}],"socials":[],"tags":[],"title":"Regional Manager","websites":[{"url":"http://www.dundermifflin.com/index.shtml","category":"work"}],"custom_fields":[{"custom_field_definition_id":8,"value":null},{"custom_field_definition_id":11,"value":null},{"custom_field_definition_id":9,"value":null},{"custom_field_definition_id":7,"value":false},{"custom_field_definition_id":3,"value":null},{"custom_field_definition_id":4,"value":null},{"custom_field_definition_id":12,"value":[]},{"custom_field_definition_id":10,"value":null},{"custom_field_definition_id":6,"value":null},{"custom_field_definition_id":5,"value":null}],"date_created":1515434864,"date_modified":1515434877,"date_last_contacted":null,"interaction_count":0,"leads_converted_from":[],"date_lead_created":null}]
+```
+- Search People by Date Added
+
+200: OK
+```json
+[{"id":7,"name":"Taylor Lowe","prefix":null,"first_name":"Taylor","middle_name":null,"last_name":"Lowe","suffix":null,"address":{"street":"221 Main Street Suite 1350","city":"San Francisco","state":"CA","postal_code":"94105","country":""},"assignee_id":null,"company_id":2,"company_name":"ProsperWorks","contact_type_id":8,"details":null,"emails":[{"email":"taylor@prosperworks.com","category":"work"}],"phone_numbers":[{"number":"4158546956","category":"work"}],"socials":[{"url":"https://www.linkedin.com/in/taylorlowe11","category":"linkedin"}],"tags":[],"title":"Business Development","websites":[{"url":"www.prosperworks.com","category":"work"}],"custom_fields":[{"custom_field_definition_id":8,"value":null},{"custom_field_definition_id":11,"value":null},{"custom_field_definition_id":9,"value":null},{"custom_field_definition_id":7,"value":false},{"custom_field_definition_id":3,"value":null},{"custom_field_definition_id":4,"value":null},{"custom_field_definition_id":12,"value":[]},{"custom_field_definition_id":10,"value":null},{"custom_field_definition_id":6,"value":null},{"custom_field_definition_id":5,"value":null}],"date_created":1516262400,"date_modified":1516299712,"date_last_contacted":null,"interaction_count":0,"leads_converted_from":[],"date_lead_created":null}]
+```
+- Search People by State
+
+200: OK
+```json
+[{"id":6,"name":"Jo Bennett, (sample)","prefix":null,"first_name":"Jo","middle_name":null,"last_name":"Bennett","suffix":"(sample)","address":{"street":"543 Washington Ave","city":"Philadelphia","state":"PA","postal_code":"19135","country":""},"assignee_id":null,"company_id":4,"company_name":"Sabre Inc (sample)","contact_type_id":5,"details":null,"emails":[{"email":"jo@sabreinc.com","category":"work"}],"phone_numbers":[],"socials":[],"tags":[],"title":"CEO","websites":[],"custom_fields":[{"custom_field_definition_id":8,"value":null},{"custom_field_definition_id":11,"value":null},{"custom_field_definition_id":9,"value":null},{"custom_field_definition_id":7,"value":false},{"custom_field_definition_id":3,"value":null},{"custom_field_definition_id":4,"value":null},{"custom_field_definition_id":12,"value":[]},{"custom_field_definition_id":10,"value":null},{"custom_field_definition_id":6,"value":null},{"custom_field_definition_id":5,"value":null}],"date_created":1515434865,"date_modified":1515525462,"date_last_contacted":null,"interaction_count":0,"leads_converted_from":[],"date_lead_created":null},{"id":5,"name":"Michael Scott, (sample)","prefix":null,"first_name":"Michael","middle_name":null,"last_name":"Scott","suffix":"(sample)","address":{"street":"213 West Main Street","city":"Scranton","state":"PA","postal_code":"18501","country":""},"assignee_id":null,"company_id":3,"company_name":"Dunder Mifflin (sample)","contact_type_id":5,"details":null,"emails":[{"email":"michael@dundermifflin.com","category":"work"}],"phone_numbers":[{"number":"4152225466","category":"work"}],"socials":[],"tags":[],"title":"Regional Manager","websites":[{"url":"http://www.dundermifflin.com/index.shtml","category":"work"}],"custom_fields":[{"custom_field_definition_id":8,"value":null},{"custom_field_definition_id":11,"value":null},{"custom_field_definition_id":9,"value":null},{"custom_field_definition_id":7,"value":false},{"custom_field_definition_id":3,"value":null},{"custom_field_definition_id":4,"value":null},{"custom_field_definition_id":12,"value":[]},{"custom_field_definition_id":10,"value":null},{"custom_field_definition_id":6,"value":null},{"custom_field_definition_id":5,"value":null}],"date_created":1515434864,"date_modified":1516310945,"date_last_contacted":null,"interaction_count":0,"leads_converted_from":[],"date_lead_created":null}]
+```
+- Search People by Phone Number
+
+200: OK
+```json
+[
+    {
+        "id": 4,
+        "name": "Jack James",
+        "prefix": null,
+        "first_name": "Jack",
+        "middle_name": null,
+        "last_name": "James",
+        "suffix": null,
+        "address": {
+            "street": "221 Main Street Suite 1350",
+            "city": "San Francisco",
+            "state": "CA",
+            "postal_code": "94105",
+            "country": ""
+        },
+        "assignee_id": null,
+        "company_id": 2,
+        "company_name": "ProsperWorks",
+        "contact_type_id": 8,
+        "details": "This is an update",
+        "emails": [
+            {
+                "email": "jackjames@prosperworks.com",
+                "category": "work"
+            }
+        ],
+        "phone_numbers": [
+            {
+                "number": "4153554776",
+                "category": "work"
+            }
+        ],
+        "socials": [
+            {
+                "url": "www.linkedin.com/pub/jack-james/54/172/b47",
+                "category": "linkedin"
+            }
+        ],
+        "tags": [],
+        "title": "Customer Support",
+        "websites": [
+            {
+                "url": "www.prosperworks.com",
+                "category": "work"
+            }
+        ],
+        "custom_fields": [
+            {
+                "custom_field_definition_id": 8,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 11,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 9,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 7,
+                "value": false
+            },
+            {
+                "custom_field_definition_id": 3,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 4,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 12,
+                "value": []
+            },
+            {
+                "custom_field_definition_id": 10,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 6,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 5,
+                "value": null
+            }
+        ],
+        "date_created": 1515434863,
+        "date_modified": 1516240218,
+        "date_last_contacted": null,
+        "interaction_count": 0,
+        "leads_converted_from": [],
+        "date_lead_created": null
+    },
+    {
+        "id": 3,
+        "name": "Jon Lee",
+        "prefix": null,
+        "first_name": "Jon",
+        "middle_name": null,
+        "last_name": "Lee",
+        "suffix": null,
+        "address": {
+            "street": "221 Main Street Suite 1350",
+            "city": "San Francisco",
+            "state": "CA",
+            "postal_code": "94105",
+            "country": ""
+        },
+        "assignee_id": null,
+        "company_id": 2,
+        "company_name": "ProsperWorks",
+        "contact_type_id": 8,
+        "details": null,
+        "emails": [
+            {
+                "email": "jonlee@prosperworks.com",
+                "category": "work"
+            }
+        ],
+        "phone_numbers": [
+            {
+                "number": "4153554776",
+                "category": "work"
+            }
+        ],
+        "socials": [
+            {
+                "url": "https://www.linkedin.com/in/jonlee168",
+                "category": "linkedin"
+            }
+        ],
+        "tags": [],
+        "title": "CEO",
+        "websites": [
+            {
+                "url": "www.prosperworks.com",
+                "category": "work"
+            }
+        ],
+        "custom_fields": [
+            {
+                "custom_field_definition_id": 8,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 11,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 9,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 7,
+                "value": false
+            },
+            {
+                "custom_field_definition_id": 3,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 4,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 12,
+                "value": []
+            },
+            {
+                "custom_field_definition_id": 10,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 6,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 5,
+                "value": null
+            }
+        ],
+        "date_created": 1515434862,
+        "date_modified": 1515434877,
+        "date_last_contacted": null,
+        "interaction_count": 0,
+        "leads_converted_from": [],
+        "date_lead_created": null
+    }
+]
+```
+- Search People by Postal Code
+
+200: OK
+```json
+[
+    {
+        "id": 7,
+        "name": "Taylor Lowe",
+        "prefix": null,
+        "first_name": "Taylor",
+        "middle_name": null,
+        "last_name": "Lowe",
+        "suffix": null,
+        "address": {
+            "street": "221 Main Street Suite 1350",
+            "city": "Vancouver",
+            "state": "BC",
+            "postal_code": "A1A1A1",
+            "country": "CA"
+        },
+        "assignee_id": null,
+        "company_id": 2,
+        "company_name": "ProsperWorks",
+        "contact_type_id": 8,
+        "details": null,
+        "emails": [
+            {
+                "email": "taylor@prosperworks.com",
+                "category": "work"
+            }
+        ],
+        "phone_numbers": [
+            {
+                "number": "4158546956",
+                "category": "work"
+            }
+        ],
+        "socials": [
+            {
+                "url": "https://www.linkedin.com/in/taylorlowe11",
+                "category": "linkedin"
+            }
+        ],
+        "tags": [],
+        "title": "Business Development",
+        "websites": [
+            {
+                "url": "www.prosperworks.com",
+                "category": "work"
+            }
+        ],
+        "custom_fields": [
+            {
                 "custom_field_definition_id": 8,
                 "value": null
             },
@@ -1893,7 +1893,7 @@ Content-Type | application/json | undefined | undefined
             }
         ],
         "date_created": 1516262400,
-        "date_modified": 1516312015,
+        "date_modified": 1516311811,
         "date_last_contacted": null,
         "interaction_count": 0,
         "leads_converted_from": [],

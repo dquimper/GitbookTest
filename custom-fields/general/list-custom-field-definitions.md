@@ -1,6 +1,6 @@
 ## List Custom Field Definitions
 
-```GET {{base_url}}/custom_field_definitions```
+```GET https://api.prosperworks.com/developer_api/v1/custom_field_definitions```
 
 Custom Field Definitions specify account specific fields not included as part of the standard resource fields and allows Copper to be customized to your specific workflow. The Custom Field Definitions API allows you to retrieve the list of Custom Field Definitions associated with your Copper account.
 
@@ -16,10 +16,10 @@ Custom Field Definitions specify account specific fields not included as part of
 
 Key | Value | Description | Type
 --- | --- | --- | ---
-X-PW-AccessToken | {{api_token}} | undefined | undefined
-X-PW-Application | developer_api | undefined | undefined
-X-PW-UserEmail | {{api_email}} | undefined | undefined
-Content-Type | application/json | undefined | undefined
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
 ### Example Responses
 
 - Custom Field Definitions

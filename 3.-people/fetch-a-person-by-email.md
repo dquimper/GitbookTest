@@ -1,6 +1,6 @@
 ## Fetch a Person by Email
 
-```POST {{base_url}}/people/fetch_by_email```
+```POST https://api.prosperworks.com/developer_api/v1/people/fetch_by_email```
 
 Email address is a unique key for People records in Copper. You can fetch a Person by it's email address using this operation.
 
@@ -8,10 +8,10 @@ Email address is a unique key for People records in Copper. You can fetch a Pers
 
 Key | Value | Description | Type
 --- | --- | --- | ---
-X-PW-AccessToken | {{api_token}} | undefined | undefined
-X-PW-Application | developer_api | undefined | undefined
-X-PW-UserEmail | {{api_email}} | undefined | undefined
-Content-Type | application/json | undefined | undefined
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
 ### Body
 
 ```

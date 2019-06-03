@@ -1,6 +1,6 @@
 ## Update an Existing Custom Activity Type
 
-```PUT {{base_url}}/custom_activity_types/{{custom_activity_type_id}}```
+```PUT https://api.prosperworks.com/developer_api/v1/custom_activity_types/{{custom_activity_type_id}}```
 
 |   Field                     | Type   |  Details  |  Default  |
 | --------------------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------- | - |
@@ -11,10 +11,10 @@
 
 Key | Value | Description | Type
 --- | --- | --- | ---
-X-PW-AccessToken | {{api_token}} | undefined | undefined
-X-PW-Application | developer_api | undefined | undefined
-X-PW-UserEmail | {{api_email}} | undefined | undefined
-Content-Type | application/json | undefined | undefined
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
 ### Body
 
 ```

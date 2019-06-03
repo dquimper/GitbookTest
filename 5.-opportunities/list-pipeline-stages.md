@@ -1,6 +1,6 @@
 ## List Pipeline Stages
 
-```GET {{base_url}}/pipeline_stages```
+```GET https://api.prosperworks.com/developer_api/v1/pipeline_stages```
 
 Pipeline Stages define the positions of Opportunities within their Pipelines. The Pipeline Stages API allows you to retrieve the list of Pipeline Stages associated with your Copper account.
 
@@ -16,10 +16,10 @@ Pipeline Stages define the positions of Opportunities within their Pipelines. Th
 
 Key | Value | Description | Type
 --- | --- | --- | ---
-X-PW-AccessToken | {{api_token}} | undefined | undefined
-X-PW-Application | developer_api | undefined | undefined
-X-PW-UserEmail | {{api_email}} | undefined | undefined
-Content-Type | application/json | undefined | undefined
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
 ### Example Responses
 
 - Pipeline Stages

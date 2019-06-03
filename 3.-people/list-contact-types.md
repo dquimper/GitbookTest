@@ -1,6 +1,6 @@
 ## List Contact Types
 
-```GET {{base_url}}/contact_types```
+```GET https://api.prosperworks.com/developer_api/v1/contact_types```
 
 Contact Types are categories into which you can place your People and Companies to classify your relationships with them. The Contact Types API allows you to retrieve the list of Contact Types associated with your Copper account.
 
@@ -14,10 +14,10 @@ Contact Types are categories into which you can place your People and Companies 
 
 Key | Value | Description | Type
 --- | --- | --- | ---
-X-PW-AccessToken | {{api_token}} | undefined | undefined
-X-PW-Application | developer_api | undefined | undefined
-X-PW-UserEmail | {{api_email}} | undefined | undefined
-Content-Type | application/json | undefined | undefined
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
 ### Example Responses
 
 - Contact Types

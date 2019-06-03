@@ -1,6 +1,6 @@
 ## Create a new custom field definition
 
-```POST {{base_url}}/custom_field_definitions```
+```POST https://api.prosperworks.com/developer_api/v1/custom_field_definitions```
 
 | Field                 | Type          | Details | Default |
 | --------------------- | ------------- | ----------------------- | ---------------------- |
@@ -15,10 +15,10 @@
 
 Key | Value | Description | Type
 --- | --- | --- | ---
-X-PW-AccessToken | {{api_token}} | undefined | undefined
-X-PW-Application | developer_api | undefined | undefined
-X-PW-UserEmail | {{api_email}} | undefined | undefined
-Content-Type | application/json | undefined | undefined
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
 ### Body
 
 ```
@@ -38,6 +38,21 @@ Content-Type | application/json | undefined | undefined
 ```
 ### Example Responses
 
+- Create a String Custom Field
+
+200: OK
+```json
+{
+    "id": 7,
+    "name": "A String",
+    "canonical_name": null,
+    "data_type": "String",
+    "available_on": [
+        "lead",
+        "person"
+    ]
+}
+```
 - Create a Currency Custom Field
 
 200: OK
@@ -81,21 +96,6 @@ Content-Type | application/json | undefined | undefined
             "name": "Option2",
             "rank": 1
         }
-    ]
-}
-```
-- Create a String Custom Field
-
-200: OK
-```json
-{
-    "id": 7,
-    "name": "A String",
-    "canonical_name": null,
-    "data_type": "String",
-    "available_on": [
-        "lead",
-        "person"
     ]
 }
 ```

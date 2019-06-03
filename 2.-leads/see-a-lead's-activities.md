@@ -1,6 +1,6 @@
 ## See a Lead's Activities
 
-```POST {{base_url}}/leads/{{example_lead_id}}/activities```
+```POST https://api.prosperworks.com/developer_api/v1/leads/{{example_lead_id}}/activities```
 
 This request will show the Activity entries created for a specific Lead. For more details please see the notes at the [/activities endpoint](https://dev.prosperworks.com).
 
@@ -8,10 +8,10 @@ This request will show the Activity entries created for a specific Lead. For mor
 
 Key | Value | Description | Type
 --- | --- | --- | ---
-X-PW-AccessToken | {{api_token}} | undefined | undefined
-X-PW-Application | developer_api | undefined | undefined
-X-PW-UserEmail | {{api_email}} | undefined | undefined
-Content-Type | application/json | undefined | undefined
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
 ### Body
 
 ```

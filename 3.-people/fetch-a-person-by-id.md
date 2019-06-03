@@ -1,12 +1,12 @@
 ## Fetch a Person by ID
 
-```GET {{base_url}}/people/{{example_person_id}}```
+```GET https://api.prosperworks.com/developer_api/v1/people/{{example_person_id}}```
 
 ### Headers
 
 Key | Value | Description | Type
 --- | --- | --- | ---
-X-PW-AccessToken | {{api_token}} | undefined | undefined
-X-PW-Application | developer_api | undefined | undefined
-X-PW-UserEmail | {{api_email}} | undefined | undefined
-Content-Type | application/json | undefined | undefined
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 

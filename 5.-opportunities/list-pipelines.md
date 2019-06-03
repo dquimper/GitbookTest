@@ -1,6 +1,6 @@
 ## List Pipelines
 
-```GET {{base_url}}/pipelines```
+```GET https://api.prosperworks.com/developer_api/v1/pipelines```
 
 Pipelines define the stages through which Opportunities move as they progress through your sales process. The Pipelines API allows you to retrieve the list of Pipelines associated with your Copper account.
 
@@ -15,10 +15,10 @@ Pipelines define the stages through which Opportunities move as they progress th
 
 Key | Value | Description | Type
 --- | --- | --- | ---
-X-PW-AccessToken | {{api_token}} | undefined | undefined
-X-PW-Application | developer_api | undefined | undefined
-X-PW-UserEmail | {{api_email}} | undefined | undefined
-Content-Type | application/json | undefined | undefined
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
 ### Example Responses
 
 - Pipelines

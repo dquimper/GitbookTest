@@ -1,6 +1,6 @@
 ## List Projects (Search)
 
-```POST {{base_url}}/projects/search```
+```POST https://api.prosperworks.com/developer_api/v1/projects/search```
 
 The /search endpoint provides the ability to list records and sort the results by certain parameters. When multiple ciriteria are provided records meeting ALL criteria will be returned (the filtering criteria have an 'AND' relationship).
 
@@ -34,10 +34,10 @@ Foonotes:
 
 Key | Value | Description | Type
 --- | --- | --- | ---
-X-PW-AccessToken | {{api_token}} | undefined | undefined
-X-PW-Application | developer_api | undefined | undefined
-X-PW-UserEmail | {{api_email}} | undefined | undefined
-Content-Type | application/json | undefined | undefined
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
 ### Body
 
 ```
@@ -48,11 +48,259 @@ Content-Type | application/json | undefined | undefined
 ```
 ### Example Responses
 
-- Search Projects by Custom Multi-Select Dropdown Set to Empty
+- List Projects in Groups of 200
 
 200: OK
 ```json
-[{"id":2,"name":"Test Project","related_resource":null,"assignee_id":2,"status":"Open","details":null,"tags":[],"custom_fields":[{"custom_field_definition_id":8,"value":null},{"custom_field_definition_id":11,"value":null},{"custom_field_definition_id":9,"value":null},{"custom_field_definition_id":7,"value":false},{"custom_field_definition_id":3,"value":null},{"custom_field_definition_id":4,"value":null},{"custom_field_definition_id":12,"value":[]},{"custom_field_definition_id":10,"value":null},{"custom_field_definition_id":6,"value":null},{"custom_field_definition_id":5,"value":null}],"date_created":1516751006,"date_modified":1516751006}]
+[
+    {
+        "id": 1,
+        "name": "Customize Your New CRM",
+        "related_resource": {
+            "id": 2,
+            "type": "company"
+        },
+        "assignee_id": 2,
+        "status": "Open",
+        "details": "Visit our settings section to discover all the ways you can customize Copper to fit your sales workflow.",
+        "tags": [
+            "tag1"
+        ],
+        "custom_fields": [
+            {
+                "custom_field_definition_id": 6,
+                "value": 1515744000
+            },
+            {
+                "custom_field_definition_id": 12,
+                "value": [
+                    8
+                ]
+            },
+            {
+                "custom_field_definition_id": 8,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 11,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 9,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 7,
+                "value": false
+            },
+            {
+                "custom_field_definition_id": 3,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 4,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 10,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 5,
+                "value": null
+            }
+        ],
+        "date_created": 1515434872,
+        "date_modified": 1516819000
+    },
+    {
+        "id": 2,
+        "name": "Test Project",
+        "related_resource": null,
+        "assignee_id": 2,
+        "status": "Open",
+        "details": null,
+        "tags": [],
+        "custom_fields": [
+            {
+                "custom_field_definition_id": 8,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 11,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 9,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 7,
+                "value": false
+            },
+            {
+                "custom_field_definition_id": 3,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 4,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 12,
+                "value": []
+            },
+            {
+                "custom_field_definition_id": 10,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 6,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 5,
+                "value": null
+            }
+        ],
+        "date_created": 1516751006,
+        "date_modified": 1516751006
+    }
+]
+```
+- Search Projects by Statuses
+
+200: OK
+```json
+[
+    {
+        "id": 1,
+        "name": "Customize Your New CRM",
+        "related_resource": {
+            "id": 2,
+            "type": "company"
+        },
+        "assignee_id": 2,
+        "status": "Open",
+        "details": "Visit our settings section to discover all the ways you can customize Copper to fit your sales workflow.",
+        "tags": [
+            "tag1"
+        ],
+        "custom_fields": [
+            {
+                "custom_field_definition_id": 6,
+                "value": 1515744000
+            },
+            {
+                "custom_field_definition_id": 12,
+                "value": [
+                    8
+                ]
+            },
+            {
+                "custom_field_definition_id": 8,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 11,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 9,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 7,
+                "value": false
+            },
+            {
+                "custom_field_definition_id": 3,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 4,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 10,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 5,
+                "value": null
+            }
+        ],
+        "date_created": 1515434872,
+        "date_modified": 1516747365
+    }
+]
+```
+- Search Projects by Assignee Ids
+
+200: OK
+```json
+[
+    {
+        "id": 1,
+        "name": "Customize Your New CRM",
+        "related_resource": {
+            "id": 2,
+            "type": "company"
+        },
+        "assignee_id": 2,
+        "status": "Open",
+        "details": "Visit our settings section to discover all the ways you can customize Copper to fit your sales workflow.",
+        "tags": [
+            "tag1"
+        ],
+        "custom_fields": [
+            {
+                "custom_field_definition_id": 6,
+                "value": 1515744000
+            },
+            {
+                "custom_field_definition_id": 12,
+                "value": [
+                    8
+                ]
+            },
+            {
+                "custom_field_definition_id": 8,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 11,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 9,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 7,
+                "value": false
+            },
+            {
+                "custom_field_definition_id": 3,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 4,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 10,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 5,
+                "value": null
+            }
+        ],
+        "date_created": 1515434872,
+        "date_modified": 1516747365
+    }
+]
 ```
 - Projects Search
 
@@ -338,6 +586,73 @@ Content-Type | application/json | undefined | undefined
     }
 ]
 ```
+- Search Projects by Custom Date Field
+
+200: OK
+```json
+[
+    {
+        "id": 1,
+        "name": "Customize Your New CRM",
+        "related_resource": {
+            "id": 2,
+            "type": "company"
+        },
+        "assignee_id": 2,
+        "status": "Open",
+        "details": "Visit our settings section to discover all the ways you can customize Copper to fit your sales workflow.",
+        "tags": [
+            "tag1"
+        ],
+        "custom_fields": [
+            {
+                "custom_field_definition_id": 6,
+                "value": 1515744000
+            },
+            {
+                "custom_field_definition_id": 12,
+                "value": [
+                    8
+                ]
+            },
+            {
+                "custom_field_definition_id": 8,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 11,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 9,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 7,
+                "value": false
+            },
+            {
+                "custom_field_definition_id": 3,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 4,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 10,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 5,
+                "value": null
+            }
+        ],
+        "date_created": 1515434872,
+        "date_modified": 1516747365
+    }
+]
+```
 - Search Projects by Tags
 
 200: OK
@@ -472,324 +787,9 @@ Content-Type | application/json | undefined | undefined
     }
 ]
 ```
-- Search Projects by Statuses
+- Search Projects by Custom Multi-Select Dropdown Set to Empty
 
 200: OK
 ```json
-[
-    {
-        "id": 1,
-        "name": "Customize Your New CRM",
-        "related_resource": {
-            "id": 2,
-            "type": "company"
-        },
-        "assignee_id": 2,
-        "status": "Open",
-        "details": "Visit our settings section to discover all the ways you can customize Copper to fit your sales workflow.",
-        "tags": [
-            "tag1"
-        ],
-        "custom_fields": [
-            {
-                "custom_field_definition_id": 6,
-                "value": 1515744000
-            },
-            {
-                "custom_field_definition_id": 12,
-                "value": [
-                    8
-                ]
-            },
-            {
-                "custom_field_definition_id": 8,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 11,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 9,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 7,
-                "value": false
-            },
-            {
-                "custom_field_definition_id": 3,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 4,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 10,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 5,
-                "value": null
-            }
-        ],
-        "date_created": 1515434872,
-        "date_modified": 1516747365
-    }
-]
-```
-- List Projects in Groups of 200
-
-200: OK
-```json
-[
-    {
-        "id": 1,
-        "name": "Customize Your New CRM",
-        "related_resource": {
-            "id": 2,
-            "type": "company"
-        },
-        "assignee_id": 2,
-        "status": "Open",
-        "details": "Visit our settings section to discover all the ways you can customize Copper to fit your sales workflow.",
-        "tags": [
-            "tag1"
-        ],
-        "custom_fields": [
-            {
-                "custom_field_definition_id": 6,
-                "value": 1515744000
-            },
-            {
-                "custom_field_definition_id": 12,
-                "value": [
-                    8
-                ]
-            },
-            {
-                "custom_field_definition_id": 8,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 11,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 9,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 7,
-                "value": false
-            },
-            {
-                "custom_field_definition_id": 3,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 4,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 10,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 5,
-                "value": null
-            }
-        ],
-        "date_created": 1515434872,
-        "date_modified": 1516819000
-    },
-    {
-        "id": 2,
-        "name": "Test Project",
-        "related_resource": null,
-        "assignee_id": 2,
-        "status": "Open",
-        "details": null,
-        "tags": [],
-        "custom_fields": [
-            {
-                "custom_field_definition_id": 8,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 11,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 9,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 7,
-                "value": false
-            },
-            {
-                "custom_field_definition_id": 3,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 4,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 12,
-                "value": []
-            },
-            {
-                "custom_field_definition_id": 10,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 6,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 5,
-                "value": null
-            }
-        ],
-        "date_created": 1516751006,
-        "date_modified": 1516751006
-    }
-]
-```
-- Search Projects by Assignee Ids
-
-200: OK
-```json
-[
-    {
-        "id": 1,
-        "name": "Customize Your New CRM",
-        "related_resource": {
-            "id": 2,
-            "type": "company"
-        },
-        "assignee_id": 2,
-        "status": "Open",
-        "details": "Visit our settings section to discover all the ways you can customize Copper to fit your sales workflow.",
-        "tags": [
-            "tag1"
-        ],
-        "custom_fields": [
-            {
-                "custom_field_definition_id": 6,
-                "value": 1515744000
-            },
-            {
-                "custom_field_definition_id": 12,
-                "value": [
-                    8
-                ]
-            },
-            {
-                "custom_field_definition_id": 8,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 11,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 9,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 7,
-                "value": false
-            },
-            {
-                "custom_field_definition_id": 3,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 4,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 10,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 5,
-                "value": null
-            }
-        ],
-        "date_created": 1515434872,
-        "date_modified": 1516747365
-    }
-]
-```
-- Search Projects by Custom Date Field
-
-200: OK
-```json
-[
-    {
-        "id": 1,
-        "name": "Customize Your New CRM",
-        "related_resource": {
-            "id": 2,
-            "type": "company"
-        },
-        "assignee_id": 2,
-        "status": "Open",
-        "details": "Visit our settings section to discover all the ways you can customize Copper to fit your sales workflow.",
-        "tags": [
-            "tag1"
-        ],
-        "custom_fields": [
-            {
-                "custom_field_definition_id": 6,
-                "value": 1515744000
-            },
-            {
-                "custom_field_definition_id": 12,
-                "value": [
-                    8
-                ]
-            },
-            {
-                "custom_field_definition_id": 8,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 11,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 9,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 7,
-                "value": false
-            },
-            {
-                "custom_field_definition_id": 3,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 4,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 10,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 5,
-                "value": null
-            }
-        ],
-        "date_created": 1515434872,
-        "date_modified": 1516747365
-    }
-]
+[{"id":2,"name":"Test Project","related_resource":null,"assignee_id":2,"status":"Open","details":null,"tags":[],"custom_fields":[{"custom_field_definition_id":8,"value":null},{"custom_field_definition_id":11,"value":null},{"custom_field_definition_id":9,"value":null},{"custom_field_definition_id":7,"value":false},{"custom_field_definition_id":3,"value":null},{"custom_field_definition_id":4,"value":null},{"custom_field_definition_id":12,"value":[]},{"custom_field_definition_id":10,"value":null},{"custom_field_definition_id":6,"value":null},{"custom_field_definition_id":5,"value":null}],"date_created":1516751006,"date_modified":1516751006}]
 ```

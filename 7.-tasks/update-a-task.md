@@ -1,6 +1,6 @@
 ## Update a Task
 
-```PUT {{base_url}}/tasks/{{example_task_id}}```
+```PUT https://api.prosperworks.com/developer_api/v1/tasks/{{example_task_id}}```
 
 Updates are only applied to fields explicitly specified in the request body. For example, if an update request is made with an empty body, no updates will be made. To remove the value from a field, the request body must specify the target field value as 'null'.
 
@@ -8,10 +8,10 @@ Updates are only applied to fields explicitly specified in the request body. For
 
 Key | Value | Description | Type
 --- | --- | --- | ---
-X-PW-AccessToken | {{api_token}} | undefined | undefined
-X-PW-Application | developer_api | undefined | undefined
-X-PW-UserEmail | {{api_email}} | undefined | undefined
-Content-Type | application/json | undefined | undefined
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
 ### Body
 
 ```

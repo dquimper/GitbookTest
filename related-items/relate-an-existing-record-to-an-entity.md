@@ -1,6 +1,6 @@
 ## Relate an existing record to an Entity
 
-```POST {{base_url}}/{{entity}}/{{entity_id}}/related```
+```POST https://api.prosperworks.com/developer_api/v1/{{entity}}/{{entity_id}}/related```
 
 Please note that when relating records this way, both records have to exist in the system already.
 
@@ -8,10 +8,10 @@ Please note that when relating records this way, both records have to exist in t
 
 Key | Value | Description | Type
 --- | --- | --- | ---
-X-PW-AccessToken | {{api_token}} | undefined | undefined
-X-PW-Application | developer_api | undefined | undefined
-X-PW-UserEmail | {{api_email}} | undefined | undefined
-Content-Type | application/json | undefined | undefined
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
 ### Body
 
 ```

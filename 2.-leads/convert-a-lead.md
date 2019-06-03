@@ -1,6 +1,6 @@
 ## CONVERT a Lead
 
-```POST {{base_url}}/leads/{{example_leadconvert_id}}/convert```
+```POST https://api.prosperworks.com/developer_api/v1/leads/{{example_leadconvert_id}}/convert```
 
 This request creates a Person record from a Lead record. Optionally, a Company and an Opportunity record can be created as well in the same process. The Lead record is removed after it has been converted.
 
@@ -14,10 +14,10 @@ This request creates a Person record from a Lead record. Optionally, a Company a
 
 Key | Value | Description | Type
 --- | --- | --- | ---
-X-PW-AccessToken | {{api_token}} | undefined | undefined
-X-PW-Application | developer_api | undefined | undefined
-X-PW-UserEmail | {{api_email}} | undefined | undefined
-Content-Type | application/json | undefined | undefined
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
 ### Body
 
 ```
