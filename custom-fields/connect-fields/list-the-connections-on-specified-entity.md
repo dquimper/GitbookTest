@@ -1,35 +1,32 @@
-# List the connections on specified entity
+## List the connections on specified entity
+
+```GET https://api.prosperworks.com/developer_api/v1/related_links?custom_field_definition_id={{custom_field_definition_id}}&source_type={{source_type}}&source_id={{source_id}}```
 
 To retrieve already existing connections in the connect field, use the list the connections API.
 
-`GET {{base_url}}/related_links?custom_field_definition_id={{custom_field_definition_id}}&source_type={{source_type}}&source_id={{source_id}}`
-
-## Parameters
+### Parameters
 
 You can include the following parameters in a search request.
 
-| Key | Value | Description |
-| :--- | :--- | :--- |
-| custom\_field\_definition\_id |  | The Id of the custom field definition. This can be fetched by the custom\_field\_definitions API. |
-| source\_type |  | The entity type of the source. Supported sources: "people", "opportunity", "lead", "organization", "project", "user" |
-| source\_id |  | The Copper record id for the specified entity type |
+Key | Value | Description
+--- | --- | ---
+custom_field_definition_id | {{custom_field_definition_id}} | The Id of the custom field definition. This can be fetched by the custom_field_definitions API.
+source_type | {{source_type}} | The entity type of the source. Supported sources: "people", "opportunity", "lead", "organization", "project", "user"
+source_id | {{source_id}} | The Copper record id for the specified entity type
+### Headers
 
-## Headers
+Key | Value | Description | Type
+--- | --- | --- | ---
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
+### Example Responses
 
-| Key | Value | Description | Type |
-| :--- | :--- | :--- | :--- |
-| X-PW-AccessToken |  | undefined | undefined |
-| X-PW-Application | developer\_api | undefined | undefined |
-| X-PW-UserEmail |  | undefined | undefined |
-| Content-Type | application/json | undefined | undefined |
-
-## Example Responses
-
-* List the connections on specified entity
+- List the connections on specified entity
 
 200: OK
-
-```javascript
+```json
 [
     {
         "id": 375,
@@ -47,4 +44,3 @@ You can include the following parameters in a search request.
     }
 ]
 ```
-

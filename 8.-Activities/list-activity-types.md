@@ -1,5 +1,7 @@
 ## List Activity Types
 
+```GET https://api.prosperworks.com/developer_api/v1/activity_types```
+
 Activity Types identify the types of Activities that occur in Copper. The Activity Types Developer API allows you to retrieve the list of Activity Types associated with your Copper account. There are two categories of Activity Type.
 
 
@@ -21,16 +23,14 @@ Activity Types with category "system" describe system-generated Activities. Ther
 
 When supplied as parameters for Activity creation or search, Activity Type objects need only specify the "category" and "id" fields. Any other values provided will be ignored.
 
-```GET {{base_url}}/activity_types```
-
 ### Headers
 
 Key | Value | Description | Type
 --- | --- | --- | ---
-X-PW-AccessToken | {{api_token}} | undefined | undefined
-X-PW-Application | developer_api | undefined | undefined
-X-PW-UserEmail | {{api_email}} | undefined | undefined
-Content-Type | application/json | undefined | undefined
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
 ### Example Responses
 
 - List Activity Types

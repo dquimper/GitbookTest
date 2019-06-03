@@ -1,25 +1,20 @@
-# View all records related to an Entity
+## View all records related to an Entity
 
-undefined
+```GET https://api.prosperworks.com/developer_api/v1/{{entity}}/{{entity_id}}/related/```
 
-`GET {{base_url}}/{{entity}}/{{entity_id}}/related/`
+### Headers
 
-## Headers
+Key | Value | Description | Type
+--- | --- | --- | ---
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
+### Example Responses
 
-| Key | Value | Description | Type |
-| :--- | :--- | :--- | :--- |
-| X-PW-AccessToken |  | undefined | undefined |
-| X-PW-Application | developer\_api | undefined | undefined |
-| X-PW-UserEmail |  | undefined | undefined |
-| Content-Type | application/json | undefined | undefined |
-
-## Example Responses
-
-* All related rcords
+- All related rcords
 
 200: OK
-
-```javascript
+```json
 [{"id":208105,"type":"project"},{"id":4417020,"type":"opportunity"},{"id":4418567,"type":"opportunity"},{"id":13358412,"type":"company"}]
 ```
-

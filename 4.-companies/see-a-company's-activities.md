@@ -1,21 +1,20 @@
-# See a Company's Activities
+## See a Company's Activities
+
+```POST https://api.prosperworks.com/developer_api/v1/companies/{{example_company_id}}/activities```
 
 This request will show the Activity entries created for a specific Company. For more details please see the notes at the [/activities endpoint](https://dev.prosperworks.com).
 
-`POST {{base_url}}/companies/{{example_company_id}}/activities`
+### Headers
 
-## Headers
+Key | Value | Description | Type
+--- | --- | --- | ---
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
+### Body
 
-| Key | Value | Description | Type |
-| :--- | :--- | :--- | :--- |
-| X-PW-AccessToken |  | undefined | undefined |
-| X-PW-Application | developer\_api | undefined | undefined |
-| X-PW-UserEmail |  | undefined | undefined |
-| Content-Type | application/json | undefined | undefined |
-
-## Body
-
-```text
+```
 {
   "activity_types": [
     {
@@ -25,14 +24,12 @@ This request will show the Activity entries created for a specific Company. For 
   ]
 }
 ```
+### Example Responses
 
-## Example Responses
-
-* Company Activities
+- Company Activities
 
 200: OK
-
-```javascript
+```json
 [
     {
         "id": 72,
@@ -72,4 +69,3 @@ This request will show the Activity entries created for a specific Company. For 
     }
 ]
 ```
-

@@ -1,25 +1,23 @@
-# View subscription by ID
+## View subscription by ID
+
+```GET https://api.prosperworks.com/developer_api/v1/webhooks{{example_webhook_id}}```
 
 This is the description of the individual request
 
-`GET {{base_url}}/webhooks{{example_webhook_id}}`
+### Headers
 
-## Headers
+Key | Value | Description | Type
+--- | --- | --- | ---
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
+### Example Responses
 
-| Key | Value | Description | Type |
-| :--- | :--- | :--- | :--- |
-| X-PW-AccessToken |  | undefined | undefined |
-| X-PW-Application | developer\_api | undefined | undefined |
-| X-PW-UserEmail |  | undefined | undefined |
-| Content-Type | application/json | undefined | undefined |
-
-## Example Responses
-
-* See Webhook by ID
+- See Webhook by ID
 
 200: OK
-
-```javascript
+```json
 {
     "id": 25347,
     "target": "https://your.endpoint.here",
@@ -32,4 +30,3 @@ This is the description of the individual request
     "created_at": 1496787761
 }
 ```
-

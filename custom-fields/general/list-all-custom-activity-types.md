@@ -1,25 +1,21 @@
-# List All Custom Activity Types
+## List All Custom Activity Types
 
-undefined
+```GET https://api.prosperworks.com/developer_api/v1/custom_activity_types```
 
-`GET {{base_url}}/custom_activity_types`
+### Headers
 
-## Headers
+Key | Value | Description | Type
+--- | --- | --- | ---
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
+### Example Responses
 
-| Key | Value | Description | Type |
-| :--- | :--- | :--- | :--- |
-| X-PW-AccessToken |  | undefined | undefined |
-| X-PW-Application | developer\_api | undefined | undefined |
-| X-PW-UserEmail |  | undefined | undefined |
-| Content-Type | application/json | undefined | undefined |
-
-## Example Responses
-
-* List All Custom Activity Types
+- List All Custom Activity Types
 
 200: OK
-
-```javascript
+```json
 [
     {
         "id": 1,
@@ -59,4 +55,3 @@ undefined
     }
 ]
 ```
-

@@ -1,45 +1,42 @@
-# List Users
+## List Users
+
+```POST https://api.prosperworks.com/developer_api/v1/users/search```
 
 **Parameters**
 
 You can include the following parameters in a search request.
 
-| Field | Type | Details | Default |
-| :--- | :--- | :--- | :--- |
-| _Required Parameters_ |  |  |  |
-| -- |  |  |  |
-| _Optional Parameters_ |  |  |  |
-| page\_number | number | The page number \(starting with 1\) that you would like to view. | 1 |
-| page\_size | number | The number of entries included in a page of results | 20 |
+|         Field         |  Type  |                            Details                             | Default |
+| --------------------- | ------ | -------------------------------------------------------------- | ------- |
+| *Required Parameters* |        |                                                                |         |
+| --                    |        |                                                                |         |
+| *Optional Parameters* |        |                                                                |         |
+| page_number           | number | The page number (starting with 1) that you would like to view. | 1       |
+| page_size             | number | The number of entries included in a page of results            | 20      |
 
-`POST {{base_url}}/users/search`
+### Headers
 
-## Headers
+Key | Value | Description | Type
+--- | --- | --- | ---
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
+### Body
 
-| Key | Value | Description | Type |
-| :--- | :--- | :--- | :--- |
-| X-PW-AccessToken |  | undefined | undefined |
-| X-PW-Application | developer\_api | undefined | undefined |
-| X-PW-UserEmail |  | undefined | undefined |
-| Content-Type | application/json | undefined | undefined |
-
-## Body
-
-```text
+```
 {
 
   "page_number":1,
   "page_size": 200
 }
 ```
+### Example Responses
 
-## Example Responses
-
-* List of Users
+- List of Users
 
 200: OK
-
-```javascript
+```json
 [
     {
         "id": 137658,
@@ -53,4 +50,3 @@ You can include the following parameters in a search request.
     }
 ]
 ```
-

@@ -1,34 +1,28 @@
-# Delete a Custom Field Definition
+## Delete a Custom Field Definition
 
-undefined
+```DELETE https://api.prosperworks.com/developer_api/v1/custom_field_definitions/{{custom_field_definition_id}}```
 
-`DELETE {{base_url}}/custom_field_definitions/{{custom_field_definition_id}}`
+### Headers
 
-## Headers
-
-| Key | Value | Description | Type |
-| :--- | :--- | :--- | :--- |
-| X-PW-AccessToken |  | undefined | undefined |
-| X-PW-Application | developer\_api | undefined | undefined |
-| X-PW-UserEmail |  | undefined | undefined |
-| Content-Type | application/json | undefined | text |
-
-## Body
-
-```text
+Key | Value | Description | Type
+--- | --- | --- | ---
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | text
+### Body
 
 ```
 
-## Example Responses
+```
+### Example Responses
 
-* Delete a Custom Field Definition
+- Delete a Custom Field Definition
 
 200: OK
-
-```javascript
+```json
 {
     "id": 6,
     "is_deleted": true
 }
 ```
-

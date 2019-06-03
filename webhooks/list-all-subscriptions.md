@@ -1,25 +1,23 @@
-# List all subscriptions
+## List all subscriptions
+
+```GET https://api.prosperworks.com/developer_api/v1/webhooks```
 
 This is the description of the individual request
 
-`GET {{base_url}}/webhooks`
+### Headers
 
-## Headers
+Key | Value | Description | Type
+--- | --- | --- | ---
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
+### Example Responses
 
-| Key | Value | Description | Type |
-| :--- | :--- | :--- | :--- |
-| X-PW-AccessToken |  | undefined | undefined |
-| X-PW-Application | developer\_api | undefined | undefined |
-| X-PW-UserEmail |  | undefined | undefined |
-| Content-Type | application/json | undefined | undefined |
-
-## Example Responses
-
-* List all subscriptions
+- List all subscriptions
 
 200: OK
-
-```javascript
+```json
 [
     {
         "id": 17065,
@@ -89,4 +87,3 @@ This is the description of the individual request
     }
 ]
 ```
-

@@ -1,12 +1,12 @@
-# Notification Example
+## Notification Example
 
-This example shows the notification request your endpoint will receive when a notification is sent. There can be 0 or more secret fields shown, depending on the initial webhook configuration. The "updated\_attributes" field only shows up on an "update" event.
+```POST https://your.endpoint.here```
 
-`POST https://your.endpoint.here`
+This example shows the notification request your endpoint will receive when a notification is sent. There can be 0 or more secret fields shown, depending on the initial webhook configuration. The "updated_attributes" field only shows up on an "update" event.
 
-## Body
+### Body
 
-```text
+```
 {
   "ids": [<entity_id_1>, <entity_id_2>, ...],
   "type": "<entity_type>",
@@ -19,4 +19,3 @@ This example shows the notification request your endpoint will receive when a no
   }
 }
 ```
-

@@ -1,31 +1,27 @@
-# Delete a Lead
+## Delete a Lead
+
+```DELETE https://api.prosperworks.com/developer_api/v1/leads/{{example_lead_id}}```
 
 This request permanently removes a Lead from your Copper account.
 
-`DELETE {{base_url}}/leads/{{example_lead_id}}`
+### Headers
 
-## Headers
-
-| Key | Value | Description | Type |
-| :--- | :--- | :--- | :--- |
-| X-PW-AccessToken |  | undefined | undefined |
-| X-PW-Application | developer\_api | undefined | undefined |
-| X-PW-UserEmail |  | undefined | undefined |
-| Content-Type | application/json | undefined | undefined |
-
-## Body
-
-```text
+Key | Value | Description | Type
+--- | --- | --- | ---
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
+### Body
 
 ```
 
-## Example Responses
+```
+### Example Responses
 
-* leaddel
+- leaddel
 
 200: OK
-
-```javascript
+```json
 {"id":8900677,"is_deleted":true}
 ```
-

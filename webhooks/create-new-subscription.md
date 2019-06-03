@@ -1,27 +1,26 @@
-# Create new subscription
+## Create new subscription
 
-"event" = "new" \| "update" \| "delete"
+```POST https://api.prosperworks.com/developer_api/v1/webhooks```
 
-"type" = "lead" \| "person" \| "company" \| "opportunity" \| "project" \| "task"
+"event" = "new" | "update" | "delete"
+
+"type" = "lead" | "person" | "company" | "opportunity" | "project" | "task"
 
 Also, you may specify an optional hash object called "secret" containing custom key/value pairs that is sent with every notification. Using this secret your notification endpoint can authenticate the request to make sure it is coming from a trusted source.
 
 This example shows the creation of a new notification for events when existing Leads are updated.
 
-`POST {{base_url}}/webhooks`
+### Headers
 
-## Headers
+Key | Value | Description | Type
+--- | --- | --- | ---
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
+### Body
 
-| Key | Value | Description | Type |
-| :--- | :--- | :--- | :--- |
-| X-PW-AccessToken |  | undefined | undefined |
-| X-PW-Application | developer\_api | undefined | undefined |
-| X-PW-UserEmail |  | undefined | undefined |
-| Content-Type | application/json | undefined | undefined |
-
-## Body
-
-```text
+```
 {
   "target": "https://your.endpoint.here",
   "type": "lead",
@@ -32,14 +31,12 @@ This example shows the creation of a new notification for events when existing L
   }
 }
 ```
+### Example Responses
 
-## Example Responses
-
-* Create subscription
+- Create subscription
 
 200: OK
-
-```javascript
+```json
 {
     "id": 17065,
     "target": "https://your.endpoint.here",
@@ -52,4 +49,3 @@ This example shows the creation of a new notification for events when existing L
     "created_at": 1489173015
 }
 ```
-

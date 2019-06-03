@@ -1,66 +1,311 @@
-# List Projects \(Search\)
+## List Projects (Search)
 
-The /search endpoint provides the ability to list records and sort the results by certain parameters. When multiple ciriteria are provided records meeting ALL criteria will be returned \(the filtering criteria have an 'AND' relationship\).
+```POST https://api.prosperworks.com/developer_api/v1/projects/search```
 
-To see examples of search request using the various parameters, click on the `Projects Search` dropdown on the right. Certain fields can be filtered by an empty value, i.e., filter records where the field is not specified. For Projects, these fields are: tags, custom dropdown, custom multi-select fields. For an example of how this works, see `Search Project by Empty Field`. Some fields \(e.g. assignee\_ids\) can also filter for an empty value by specifying -2 as the ID.
+The /search endpoint provides the ability to list records and sort the results by certain parameters. When multiple ciriteria are provided records meeting ALL criteria will be returned (the filtering criteria have an 'AND' relationship).
+
+To see examples of search request using the various parameters, click on the `Projects Search` dropdown on the right. Certain fields can be filtered by an empty value, i.e., filter records where the field is not specified. For Projects, these fields are: tags, custom dropdown, custom multi-select fields. For an example of how this works, see `Search Project by Empty Field`. Some fields (e.g. assignee_ids) can also filter for an empty value by specifying -2 as the ID.
 
 To search by custom fields, see `Search Entity by Custom Field` under `Custom Fields` folder.
 
-To change the number of records returned, change the "page\_size" parameter. E.g., specify 200 for a page size of 200 records.
+To change the number of records returned, change the "page_size" parameter. E.g., specify 200 for a page size of 200 records.
 
-| Field | Type | Details | Default |
-| :--- | :--- | :--- | :--- |
-| page\_number | number | The page number \(starting with 1\) that you would like to view. | 1 |
-| page\_size | number | The number of entries included in a page of results | 20 |
-| sort\_by | string | The field on which to sort the results \(see footnote 1\). | name |
-| sort\_direction | string | The direction in which to sort the results. Possible values are: asc or desc. | asc |
-| name | string | Full name of the Opportunity to search for. | none |
-| assignee\_ids | number\[\] | The ids of Users that Opportunities must be owned by, or -2 for Opportunities with no owner. | none |
-| status\_ids | number\[\] | An array of Opportunity status IDs. | none |
-| tags | string\[\] | Filter Opportunities to those that match at least one of the tags specified. | none |
-| followed | number | 1: followed, 2: not followed | none |
-| minimum\_created\_date | timestamp | The Unix timestamp of the earliest date Opportunities are created. | none |
-| maximum\_created\_date | timestamp | The Unix timestamp of the latest date Opportunities are created. | none |
-| minimum\_modified\_date | timestamp | The Unix timestamp of the earliest date Opportunities are modified. | none |
-| maximum\_modified\_date | timestamp | The Unix timestamp of the latest date Opportunities are modified. | none |
 
-Foonotes: 1. Possible fields are: name, assigned\_to, related\_to, status, date\_modified, date\_created.
+|           Field           |    Type   |                                    Details                                                   | Default |
+| ------------------------- | --------- | -------------------------------------------------------------------------------------------- | ------- |
+| page_number               | number    | The page number (starting with 1) that you would like to view.                               | 1       |
+| page_size                 | number    | The number of entries included in a page of results                                          | 20      |
+| sort_by                   | string    | The field on which to sort the results (see footnote 1).                                     | name    |
+| sort_direction            | string    | The direction in which to sort the results. Possible values are: asc or desc.                | asc     |
+| name                      | string    | Full name of the Opportunity to search for.                                                  | none    |
+| assignee_ids              | number[]  | The ids of Users that Opportunities must be owned by, or -2 for Opportunities with no owner. | none    |
+| status_ids                | number[]  | An array of Opportunity status IDs.                                                          | none    |
+| tags                      | string[]  | Filter Opportunities to those that match at least one of the tags specified.                 | none    |
+| followed                  | number    | 1: followed, 2: not followed                                                                 | none    |
+| minimum_created_date      | timestamp | The Unix timestamp of the earliest date Opportunities are created.                           | none    |
+| maximum_created_date      | timestamp | The Unix timestamp of the latest date Opportunities are created.                             | none    |
+| minimum_modified_date     | timestamp | The Unix timestamp of the earliest date Opportunities are modified.                          | none    |
+| maximum_modified_date     | timestamp | The Unix timestamp of the latest date Opportunities are modified.                            | none    |
 
-`POST {{base_url}}/projects/search`
+Foonotes:
+1. Possible fields are: name, assigned_to, related_to, status, date_modified, date_created.
 
-## Headers
+### Headers
 
-| Key | Value | Description | Type |
-| :--- | :--- | :--- | :--- |
-| X-PW-AccessToken |  | undefined | undefined |
-| X-PW-Application | developer\_api | undefined | undefined |
-| X-PW-UserEmail |  | undefined | undefined |
-| Content-Type | application/json | undefined | undefined |
+Key | Value | Description | Type
+--- | --- | --- | ---
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
+### Body
 
-## Body
-
-```text
+```
 {
   "page_size": 25,
   "sort_by": "name"
 }
 ```
+### Example Responses
 
-## Example Responses
-
-* Search Projects by Custom Multi-Select Dropdown Set to Empty
+- List Projects in Groups of 200
 
 200: OK
-
-```javascript
-[{"id":2,"name":"Test Project","related_resource":null,"assignee_id":2,"status":"Open","details":null,"tags":[],"custom_fields":[{"custom_field_definition_id":8,"value":null},{"custom_field_definition_id":11,"value":null},{"custom_field_definition_id":9,"value":null},{"custom_field_definition_id":7,"value":false},{"custom_field_definition_id":3,"value":null},{"custom_field_definition_id":4,"value":null},{"custom_field_definition_id":12,"value":[]},{"custom_field_definition_id":10,"value":null},{"custom_field_definition_id":6,"value":null},{"custom_field_definition_id":5,"value":null}],"date_created":1516751006,"date_modified":1516751006}]
+```json
+[
+    {
+        "id": 1,
+        "name": "Customize Your New CRM",
+        "related_resource": {
+            "id": 2,
+            "type": "company"
+        },
+        "assignee_id": 2,
+        "status": "Open",
+        "details": "Visit our settings section to discover all the ways you can customize Copper to fit your sales workflow.",
+        "tags": [
+            "tag1"
+        ],
+        "custom_fields": [
+            {
+                "custom_field_definition_id": 6,
+                "value": 1515744000
+            },
+            {
+                "custom_field_definition_id": 12,
+                "value": [
+                    8
+                ]
+            },
+            {
+                "custom_field_definition_id": 8,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 11,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 9,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 7,
+                "value": false
+            },
+            {
+                "custom_field_definition_id": 3,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 4,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 10,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 5,
+                "value": null
+            }
+        ],
+        "date_created": 1515434872,
+        "date_modified": 1516819000
+    },
+    {
+        "id": 2,
+        "name": "Test Project",
+        "related_resource": null,
+        "assignee_id": 2,
+        "status": "Open",
+        "details": null,
+        "tags": [],
+        "custom_fields": [
+            {
+                "custom_field_definition_id": 8,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 11,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 9,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 7,
+                "value": false
+            },
+            {
+                "custom_field_definition_id": 3,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 4,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 12,
+                "value": []
+            },
+            {
+                "custom_field_definition_id": 10,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 6,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 5,
+                "value": null
+            }
+        ],
+        "date_created": 1516751006,
+        "date_modified": 1516751006
+    }
+]
 ```
-
-* Projects Search
+- Search Projects by Statuses
 
 200: OK
+```json
+[
+    {
+        "id": 1,
+        "name": "Customize Your New CRM",
+        "related_resource": {
+            "id": 2,
+            "type": "company"
+        },
+        "assignee_id": 2,
+        "status": "Open",
+        "details": "Visit our settings section to discover all the ways you can customize Copper to fit your sales workflow.",
+        "tags": [
+            "tag1"
+        ],
+        "custom_fields": [
+            {
+                "custom_field_definition_id": 6,
+                "value": 1515744000
+            },
+            {
+                "custom_field_definition_id": 12,
+                "value": [
+                    8
+                ]
+            },
+            {
+                "custom_field_definition_id": 8,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 11,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 9,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 7,
+                "value": false
+            },
+            {
+                "custom_field_definition_id": 3,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 4,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 10,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 5,
+                "value": null
+            }
+        ],
+        "date_created": 1515434872,
+        "date_modified": 1516747365
+    }
+]
+```
+- Search Projects by Assignee Ids
 
-```javascript
+200: OK
+```json
+[
+    {
+        "id": 1,
+        "name": "Customize Your New CRM",
+        "related_resource": {
+            "id": 2,
+            "type": "company"
+        },
+        "assignee_id": 2,
+        "status": "Open",
+        "details": "Visit our settings section to discover all the ways you can customize Copper to fit your sales workflow.",
+        "tags": [
+            "tag1"
+        ],
+        "custom_fields": [
+            {
+                "custom_field_definition_id": 6,
+                "value": 1515744000
+            },
+            {
+                "custom_field_definition_id": 12,
+                "value": [
+                    8
+                ]
+            },
+            {
+                "custom_field_definition_id": 8,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 11,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 9,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 7,
+                "value": false
+            },
+            {
+                "custom_field_definition_id": 3,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 4,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 10,
+                "value": null
+            },
+            {
+                "custom_field_definition_id": 5,
+                "value": null
+            }
+        ],
+        "date_created": 1515434872,
+        "date_modified": 1516747365
+    }
+]
+```
+- Projects Search
+
+200: OK
+```json
 [
     {
         "id": 13358412,
@@ -341,12 +586,10 @@ Foonotes: 1. Possible fields are: name, assigned\_to, related\_to, status, date\
     }
 ]
 ```
-
-* Search Projects by Tags
+- Search Projects by Custom Date Field
 
 200: OK
-
-```javascript
+```json
 [
     {
         "id": 1,
@@ -410,12 +653,10 @@ Foonotes: 1. Possible fields are: name, assigned\_to, related\_to, status, date\
     }
 ]
 ```
-
-* Search Projects by Custom Multi-Select Dropdown
+- Search Projects by Tags
 
 200: OK
-
-```javascript
+```json
 [
     {
         "id": 1,
@@ -479,12 +720,10 @@ Foonotes: 1. Possible fields are: name, assigned\_to, related\_to, status, date\
     }
 ]
 ```
-
-* Search Projects by Statuses
+- Search Projects by Custom Multi-Select Dropdown
 
 200: OK
-
-```javascript
+```json
 [
     {
         "id": 1,
@@ -548,264 +787,9 @@ Foonotes: 1. Possible fields are: name, assigned\_to, related\_to, status, date\
     }
 ]
 ```
-
-* List Projects in Groups of 200
-
-200: OK
-
-```javascript
-[
-    {
-        "id": 1,
-        "name": "Customize Your New CRM",
-        "related_resource": {
-            "id": 2,
-            "type": "company"
-        },
-        "assignee_id": 2,
-        "status": "Open",
-        "details": "Visit our settings section to discover all the ways you can customize Copper to fit your sales workflow.",
-        "tags": [
-            "tag1"
-        ],
-        "custom_fields": [
-            {
-                "custom_field_definition_id": 6,
-                "value": 1515744000
-            },
-            {
-                "custom_field_definition_id": 12,
-                "value": [
-                    8
-                ]
-            },
-            {
-                "custom_field_definition_id": 8,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 11,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 9,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 7,
-                "value": false
-            },
-            {
-                "custom_field_definition_id": 3,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 4,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 10,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 5,
-                "value": null
-            }
-        ],
-        "date_created": 1515434872,
-        "date_modified": 1516819000
-    },
-    {
-        "id": 2,
-        "name": "Test Project",
-        "related_resource": null,
-        "assignee_id": 2,
-        "status": "Open",
-        "details": null,
-        "tags": [],
-        "custom_fields": [
-            {
-                "custom_field_definition_id": 8,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 11,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 9,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 7,
-                "value": false
-            },
-            {
-                "custom_field_definition_id": 3,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 4,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 12,
-                "value": []
-            },
-            {
-                "custom_field_definition_id": 10,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 6,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 5,
-                "value": null
-            }
-        ],
-        "date_created": 1516751006,
-        "date_modified": 1516751006
-    }
-]
-```
-
-* Search Projects by Assignee Ids
+- Search Projects by Custom Multi-Select Dropdown Set to Empty
 
 200: OK
-
-```javascript
-[
-    {
-        "id": 1,
-        "name": "Customize Your New CRM",
-        "related_resource": {
-            "id": 2,
-            "type": "company"
-        },
-        "assignee_id": 2,
-        "status": "Open",
-        "details": "Visit our settings section to discover all the ways you can customize Copper to fit your sales workflow.",
-        "tags": [
-            "tag1"
-        ],
-        "custom_fields": [
-            {
-                "custom_field_definition_id": 6,
-                "value": 1515744000
-            },
-            {
-                "custom_field_definition_id": 12,
-                "value": [
-                    8
-                ]
-            },
-            {
-                "custom_field_definition_id": 8,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 11,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 9,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 7,
-                "value": false
-            },
-            {
-                "custom_field_definition_id": 3,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 4,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 10,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 5,
-                "value": null
-            }
-        ],
-        "date_created": 1515434872,
-        "date_modified": 1516747365
-    }
-]
+```json
+[{"id":2,"name":"Test Project","related_resource":null,"assignee_id":2,"status":"Open","details":null,"tags":[],"custom_fields":[{"custom_field_definition_id":8,"value":null},{"custom_field_definition_id":11,"value":null},{"custom_field_definition_id":9,"value":null},{"custom_field_definition_id":7,"value":false},{"custom_field_definition_id":3,"value":null},{"custom_field_definition_id":4,"value":null},{"custom_field_definition_id":12,"value":[]},{"custom_field_definition_id":10,"value":null},{"custom_field_definition_id":6,"value":null},{"custom_field_definition_id":5,"value":null}],"date_created":1516751006,"date_modified":1516751006}]
 ```
-
-* Search Projects by Custom Date Field
-
-200: OK
-
-```javascript
-[
-    {
-        "id": 1,
-        "name": "Customize Your New CRM",
-        "related_resource": {
-            "id": 2,
-            "type": "company"
-        },
-        "assignee_id": 2,
-        "status": "Open",
-        "details": "Visit our settings section to discover all the ways you can customize Copper to fit your sales workflow.",
-        "tags": [
-            "tag1"
-        ],
-        "custom_fields": [
-            {
-                "custom_field_definition_id": 6,
-                "value": 1515744000
-            },
-            {
-                "custom_field_definition_id": 12,
-                "value": [
-                    8
-                ]
-            },
-            {
-                "custom_field_definition_id": 8,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 11,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 9,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 7,
-                "value": false
-            },
-            {
-                "custom_field_definition_id": 3,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 4,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 10,
-                "value": null
-            },
-            {
-                "custom_field_definition_id": 5,
-                "value": null
-            }
-        ],
-        "date_created": 1515434872,
-        "date_modified": 1516747365
-    }
-]
-```
-

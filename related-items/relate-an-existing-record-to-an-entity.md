@@ -1,21 +1,20 @@
-# Relate an existing record to an Entity
+## Relate an existing record to an Entity
+
+```POST https://api.prosperworks.com/developer_api/v1/{{entity}}/{{entity_id}}/related```
 
 Please note that when relating records this way, both records have to exist in the system already.
 
-`POST {{base_url}}/{{entity}}/{{entity_id}}/related`
+### Headers
 
-## Headers
+Key | Value | Description | Type
+--- | --- | --- | ---
+X-PW-AccessToken | <your_api_token> |  | 
+X-PW-Application | developer_api |  | 
+X-PW-UserEmail | <your_email_address> |  | 
+Content-Type | application/json |  | 
+### Body
 
-| Key | Value | Description | Type |
-| :--- | :--- | :--- | :--- |
-| X-PW-AccessToken |  | undefined | undefined |
-| X-PW-Application | developer\_api | undefined | undefined |
-| X-PW-UserEmail |  | undefined | undefined |
-| Content-Type | application/json | undefined | undefined |
-
-## Body
-
-```text
+```
 {
   "resource": {
     "id": 2827700,
@@ -23,14 +22,11 @@ Please note that when relating records this way, both records have to exist in t
   }
 }
 ```
+### Example Responses
 
-## Example Responses
-
-* Relate Opportunity to Person
+- Relate Opportunity to Person
 
 200: OK
-
-```javascript
+```json
 {"added":true,"resource":{"id":2827700,"type":"opportunity"}}
 ```
-
